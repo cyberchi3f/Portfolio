@@ -41,15 +41,13 @@ Go to **File → New Virtual Machine**, select:
 
 > ℹ️ VMware correctly detects Parrot OS as Debian-based.
 
-<img width="426" height="427" alt="2026-03-27 13_07_48-New Virtual Machine Wizard" src="https://github.com/user-attachments/assets/223bfb8f-e70a-4875-9efb-4864d0e4315b" />
-
-
 ## Step 2 — Name the Virtual Machine
 
 - Name: `Parrot`
 - Choose storage location
 
-<img width="430" height="430" alt="2026-03-27 13_12_39-Sudo - VMware Workstation" src="https://github.com/user-attachments/assets/e5ce2537-d555-4a50-863d-e60c82dbecd7" />
+<img width="426" height="427" alt="2026-03-27 13_07_48-New Virtual Machine Wizard" src="https://github.com/user-attachments/assets/223bfb8f-e70a-4875-9efb-4864d0e4315b" />
+
 
 
 ## Step 3 — Confirm ISO Selection
@@ -161,12 +159,8 @@ Wait for Parrot OS to boot.
 
 Click **Install Parrot** on the desktop.
 
-<img width="1366" height="768" alt="2026-03-27 13_31_48-What Is HSTS and How Do You Set It Up_ and 21 more pages - Personal - Microsoft​" src="https://github.com/user-attachments/assets/77a30e8b-7b22-4130-a45d-1d49e49d3182" />
-
-<img width="1366" height="768" alt="2026-03-27 13_32_13-Parrot - VMware Workstation" src="https://github.com/user-attachments/assets/35ec563a-b725-4310-a2e2-dff794ccdea4" />
-
-
 ## Step 17 — Open Installer
+<img width="1366" height="768" alt="2026-03-27 13_31_48-What Is HSTS and How Do You Set It Up_ and 21 more pages - Personal - Microsoft​" src="https://github.com/user-attachments/assets/77a30e8b-7b22-4130-a45d-1d49e49d3182" />
 
 Double-click the installer icon.
 
@@ -242,13 +236,4 @@ Enter credentials to log in.
 
 You are now inside Parrot OS.
 
-<img width="1463" height="818" alt="2026-03-30 10_52_34-" src="https://github.com/user-attachments/assets/4b9af9be-0f52-4979-bea8-068ca2abced2" />
-
-
-# ✅ Post-Installation Checklist
-
-Run the following after login:
-
-```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install open-vm-tools-desktop -y
+<img width="1360" height="771" alt="2026-03-30 10_52_34-" src="https://github.com/user-attachments/assets/e25f88fe-9b4d-4345-a846-2f487b13ac92" />
