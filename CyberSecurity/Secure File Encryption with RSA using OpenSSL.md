@@ -128,7 +128,9 @@ You should see:
 Successfully completed a full asymmetric encryption cycle:
 
 -Generated an RSA key pair
+
 -Encrypted a message with the public key (anyone can do this)
+
 -Decrypted it with the private key (only you can do this)
 
 This is how secure communication works on the internet — for example, in HTTPS websites, secure email, and digital signatures.
