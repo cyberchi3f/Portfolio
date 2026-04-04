@@ -6,10 +6,6 @@ This project walks through generating key pairs, extracting a public key, encryp
 
 ---
 
-Here's a much simpler and beginner-friendly version:
-
----
-
 In this lab, you will learn about **asymmetric encryption**. 
 
 This is an important idea in cryptography. 
@@ -26,13 +22,6 @@ In this lab, we will use the popular **RSA** method and the `openssl` tool. You 
 - Lock a message using the public key
 - Unlock the message using the private key
 
-You will do everything inside your terminal, in the `~/project` folder.
-
----
-
-This version uses very simple words and short sentences. Perfect for absolute beginners.
-
-Would you like me to make it even shorter or add any examples? Just say! 😊
 
 ## 📘 Overview
 
@@ -41,7 +30,6 @@ Asymmetric encryption (public-key cryptography) uses **two keys**:
 - 🔓 Public Key → used for encryption (shared openly)
 - 🔐 Private Key → used for decryption (kept secret)
 
-This lab demonstrates how secure communication is achieved without sharing a secret key beforehand. :contentReference[oaicite:0]{index=0}
 
 ---
 
