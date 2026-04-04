@@ -51,6 +51,9 @@ The private.pem file contains both private and public parts. Now extract the pub
 
 <img width="560" height="258" alt="2026-04-04 06_22_31-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/f3d002b2-2088-4794-aaf5-2ee2e19c87bc" />
 
+"writing RSA key" = OpenSSL is saying: "Done! I saved your key."
+It is a good sign — everything worked correctly.
+
 Explanation
 
 openssl rsa → Tool for working with RSA keys
@@ -122,10 +125,10 @@ You should see:
 <img width="438" height="67" alt="image" src="https://github.com/user-attachments/assets/0ee44ddf-a02b-4ae8-9009-eb624a6b45c4" />
 
 
-You have successfully completed a full asymmetric encryption cycle:
+Successfully completed a full asymmetric encryption cycle:
 
-Generated an RSA key pair
-Encrypted a message with the public key (anyone can do this)
-Decrypted it with the private key (only you can do this)
+-Generated an RSA key pair
+-Encrypted a message with the public key (anyone can do this)
+-Decrypted it with the private key (only you can do this)
 
 This is how secure communication works on the internet — for example, in HTTPS websites, secure email, and digital signatures.
