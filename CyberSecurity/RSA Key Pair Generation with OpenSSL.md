@@ -1,4 +1,4 @@
- # 🔐 Secure File Encryption with RSA using OpenSSL
+ # 🔐 RSA Key Pair Generation with OpenSSL
 
 In this lab, you will learn about **asymmetric encryption**. also known as public-key cryptography. This one-way relationship is the foundation of secure communication over insecure networks. 
 
