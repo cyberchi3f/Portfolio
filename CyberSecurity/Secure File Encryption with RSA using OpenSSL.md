@@ -1,11 +1,5 @@
  🔐 Secure File Encryption with RSA using OpenSSL
 
-A hands-on cybersecurity lab demonstrating **asymmetric encryption using RSA** with OpenSSL.
-
-This project walks through generating key pairs, extracting a public key, encrypting a message, and decrypting it securely using command-line tools.
-
----
-
 In this lab, you will learn about **asymmetric encryption**. 
 
 This is an important idea in cryptography. 
@@ -36,7 +30,7 @@ Asymmetric encryption (public-key cryptography) uses **two keys**:
 ## 🧰 Tools Used
 
 - OpenSSL
-- Linux Terminal (Ubuntu / Parrot OS / Kali Linux)
+- Linux Terminal (Kali Linux)
 
 ---
 
