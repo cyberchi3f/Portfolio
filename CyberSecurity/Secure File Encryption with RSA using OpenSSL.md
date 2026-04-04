@@ -1,8 +1,6 @@
  🔐 Secure File Encryption with RSA using OpenSSL
 
-In this lab, you will learn about **asymmetric encryption**. 
-
-This is an important idea in cryptography. 
+In this lab, you will learn about **asymmetric encryption**. also known as public-key cryptography. This is an important idea in cryptography. 
 
 Unlike normal encryption that uses only **one key** for both locking and unlocking messages, asymmetric encryption uses **two keys**: a **public key** and a **private key**.
 
