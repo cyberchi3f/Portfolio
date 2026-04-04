@@ -37,7 +37,9 @@ Asymmetric encryption (public-key cryptography) uses **two keys**:
 Run this command to create your RSA key pair:
 
 
-openssl genrsa -out private.pem 2048
+<img width="581" height="556" alt="2026-04-04 06_21_30-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/6dbd60dd-23cd-4c63-8265-8f46b89edeb3" />
+
+---
 
 Explanation
 
@@ -48,8 +50,10 @@ genrsa → Command to generate an RSA private key
 You should see private.pem in the list.
 
 
-##Step 2: Extract the Public Key
+##  Step 2: Extract the Public Key
 The private.pem file contains both private and public parts. Now extract the public key so others can use it:
+
+<img width="560" height="258" alt="2026-04-04 06_22_31-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/f3d002b2-2088-4794-aaf5-2ee2e19c87bc" />
 
 Explanation
 
@@ -64,7 +68,11 @@ You should now see private.pem and public.pem.
 
 First, create a simple secret message:
 
+<img width="458" height="202" alt="2026-04-04 06_23_35-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/f03bdd0e-f835-4055-be3e-6b0d996478c4" />
+
 Now encrypt it using the public key:
+
+<img width="919" height="205" alt="2026-04-04 06_24_58-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/8c5edf75-1a52-484a-bce1-6e4a301ec613" />
 
 Explanation
 
@@ -79,7 +87,8 @@ The file encrypted.bin will look like unreadable binary data if you try to open 
 
 ##Step 4: Decrypt the Message with the Private Key
 Decrypt the encrypted file using your private key:
-Bash
+
+<img width="831" height="103" alt="2026-04-04 06_25_40-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/ffa64f4e-51e4-4fbc-b1ab-6140da1f56ca" />
 
 Explanation
 
