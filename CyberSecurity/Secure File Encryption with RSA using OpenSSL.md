@@ -62,15 +62,21 @@ The private.pem file contains both private and public parts. Now extract the pub
 Explanation
 
 openssl rsa → Tool for working with RSA keys
+
 -in private.pem → Uses your private key file
+
 -pubout → Outputs only the public key
+
 -out public.pem → Saves it as public.pem
 
 You should now see private.pem and public.pem.
 
+<img width="402" height="61" alt="image" src="https://github.com/user-attachments/assets/d17e02a1-3073-4923-a9f6-bd570ce4f0f5" />
+
 ##Step 3: Encrypt a Message with the Public Key
 
 First, create a simple secret message:
+
 
 <img width="458" height="202" alt="2026-04-04 06_23_35-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/f03bdd0e-f835-4055-be3e-6b0d996478c4" />
 
@@ -81,13 +87,18 @@ Now encrypt it using the public key:
 Explanation
 
 openssl pkeyutl → Tool for public key operations (encrypt/decrypt)
+
 -encrypt → We want to encrypt
+
 -pubin → Tells OpenSSL we are using a public key
+
 -inkey public.pem → Uses your public key
+
 -in message.txt → The message to encrypt
+
 -out encrypted.bin → Saves the encrypted result
 
-The file encrypted.bin will look like unreadable binary data if you try to open it.
+The file encrypted_message.txt will look like unreadable binary data if you try to open it.
 
 ##Step 4: Decrypt the Message with the Private Key
 Decrypt the encrypted file using your private key:
@@ -97,8 +108,11 @@ Decrypt the encrypted file using your private key:
 Explanation
 
 -decrypt → We want to decrypt
+
 -inkey private.pem → Uses your private key
+
 -in encrypted.bin → The encrypted file
+
 -out decrypted.txt → Saves the result as text
 
 Check the decrypted message:
