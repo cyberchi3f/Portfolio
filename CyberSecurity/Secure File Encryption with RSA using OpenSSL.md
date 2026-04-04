@@ -44,9 +44,13 @@ Run this command to create your RSA key pair:
 Explanation
 
 openssl → The tool we are using
+
 genrsa → Command to generate an RSA private key
+
 -out private.pem → Saves the key to a file named private.pem
+
 2048 → Makes a 2048-bit key (a common secure size)
+
 You should see private.pem in the list.
 
 
