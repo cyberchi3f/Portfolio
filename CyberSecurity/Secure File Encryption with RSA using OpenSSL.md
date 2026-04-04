@@ -1,11 +1,11 @@
- 🔐 Secure File Encryption with RSA using OpenSSL
+ # 🔐 Secure File Encryption with RSA using OpenSSL
 
 In this lab, you will learn about **asymmetric encryption**. also known as public-key cryptography. This one-way relationship is the foundation of secure communication over insecure networks. 
 
 Unlike normal encryption that uses only **one key** for both locking and unlocking messages, asymmetric encryption uses **two keys**: a **public key** and a **private key**.
 
-- The **public key** can be shared with anyone. It is used to lock (encrypt) messages.  
-- The **private key** must stay secret. It is used to unlock (decrypt) messages.
+- 🔓 Public Key → can be shared with anyone. It is used to lock (encrypt) messages.
+- 🔐 Private Key → must stay secret. It is used to unlock (decrypt) messages.
 
 This system lets people send secret messages without needing to share a secret key first.
 
@@ -13,17 +13,6 @@ In this lab, we will use the popular **RSA** method and the `openssl` tool. You 
 - Create your own pair of keys
 - Lock a message using the public key
 - Unlock the message using the private key
-
-
-## 📘 Overview
-
-Asymmetric encryption (public-key cryptography) uses **two keys**:
-
-- 🔓 Public Key → used for encryption (shared openly)
-- 🔐 Private Key → used for decryption (kept secret)
-
-
----
 
 ## 🧰 Tools Used
 
@@ -36,8 +25,7 @@ Asymmetric encryption (public-key cryptography) uses **two keys**:
 
 Run this command to create your RSA key pair:
 
-
-<img width="581" height="556" alt="2026-04-04 06_21_30-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/6dbd60dd-23cd-4c63-8265-8f46b89edeb3" />
+<img width="369" height="44" alt="image" src="https://github.com/user-attachments/assets/97b6e242-0ab2-491b-94ef-2354dfd6a174" />
 
 ---
 
@@ -51,7 +39,9 @@ genrsa → Command to generate an RSA private key
 
 2048 → Makes a 2048-bit key (a common secure size)
 
-You should see private.pem in the list.
+You read the private.pem 
+
+<img width="496" height="457" alt="image" src="https://github.com/user-attachments/assets/b6127709-32ea-46ab-8424-fad54ca66ce5" />
 
 ---
 
