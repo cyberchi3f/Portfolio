@@ -46,8 +46,6 @@ content of the text files
 
 <img width="542" height="121" alt="image" src="https://github.com/user-attachments/assets/e507bae3-6083-4d8d-b268-87a1020a2c59" />
 
-ls -l
-
  ---
 
 ## Step 1: Sign Message with Private Key
@@ -104,14 +102,8 @@ Sign document.txt:
 
 <img width="659" height="61" alt="image" src="https://github.com/user-attachments/assets/17d4592b-e329-4815-8d6e-b1ccfbafcc29" />
 
-Confirm file creation:
 
-<img width="553" height="161" alt="image" src="https://github.com/user-attachments/assets/c25ce3e8-7361-425b-ae88-e7f1f88e3eb5" />
-
-Sign File with Private Key
-In this step, we will reinforce the signing process by applying it to a different file. This will help solidify your understanding of how a signed hash is created and used. We have another file in our directory named document.txt. We will now create a digital signature for this document.
-
-The procedure is identical to what we did in Step 2. We will generate a SHA-256 hash of document.txt and then sign that hash with our private.pem key.
+We will generate a SHA-256 hash of document.txt and then sign that hash with our private.pem key.
 
 Let's create the signature and save it to a file named document.sig.
 
