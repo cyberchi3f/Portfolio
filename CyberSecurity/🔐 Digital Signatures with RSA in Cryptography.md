@@ -59,15 +59,15 @@ Generate a digital signature for message.txt:
 ---
 
  Command Breakdown
-openssl dgst → Performs hashing (digest operation)
+`openssl dgst` → Performs hashing (digest operation)
 
-sha256 → Uses SHA-256 hashing algorithm
+`sha256` → Uses SHA-256 hashing algorithm
 
-sign private.pem → Signs using the private key
+`sign private.pem` → Signs using the private key
 
-out signature.bin → Outputs the signature file
+`out signature.bin` → Outputs the signature file
 
-message.txt → Input file to sign
+`message.txt` → Input file to sign
 
 ---
 
@@ -85,21 +85,16 @@ Verify the signature using the public key:
  ---
 
 Command Breakdown
-verify public.pem → Uses public key for verification
+`verify public.pem` → Uses public key for verification
 
-signature signature.bin → Signature file
+`signature signature.bin` → Signature file
 
-message.txt → Original message
+`message.txt` → Original message
 
 ---
 
 ✔ Expected Output
-Verified OK
-
-✔ This confirms:
-
-The message is authentic
-The message has not been altered
+Verified OK, This confirms:The message is authentic and has not been altered
 
 ## Step 3: Sign Another File
 
@@ -107,9 +102,9 @@ Sign document.txt:
 
 <img width="659" height="61" alt="image" src="https://github.com/user-attachments/assets/17d4592b-e329-4815-8d6e-b1ccfbafcc29" />
 
----
 
 Confirm file creation:
+<img width="553" height="161" alt="image" src="https://github.com/user-attachments/assets/c25ce3e8-7361-425b-ae88-e7f1f88e3eb5" />
 
 Sign File with Private Key
 In this step, we will reinforce the signing process by applying it to a different file. This will help solidify your understanding of how a signed hash is created and used. We have another file in our directory named document.txt. We will now create a digital signature for this document.
