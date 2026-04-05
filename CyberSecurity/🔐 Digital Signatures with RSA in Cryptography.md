@@ -126,60 +126,54 @@ Verification failure
 
 ---
 
-Why Tampering Breaks the Signature
+## 🔬 Why Tampering Breaks the Signature
 
- Signing Process
--The file is hashed → creates a unique digital fingerprint
+### 🔐 Signing Process
+- The file is hashed → creates a unique digital fingerprint  
+- The hash is encrypted using the private key → produces the signature  
 
--The hash is encrypted using the private key → signature
+### 🔎 Verification Process
+- The signature is decrypted using the public key  
+- A new hash is generated from the current file  
+- Both hashes are compared  
 
- Verification Process
+➡ If the file changes, the hash changes → verification fails  
 
--Signature is decrypted using the public key
+---
 
--A new hash is generated from the current file
+## 🧮 Understanding Hash Functions
 
--Both hashes are compared
+A hash function acts as a **digital fingerprint** for data.
 
-➡ If the file changes, the hash changes → verification fails
+### 🔑 Key Properties
 
-Understanding Hash Functions
+- **Deterministic** → Same input produces the same output  
+- **Avalanche Effect** → Small change causes a large difference in the hash  
+- **One-Way Function** → Cannot reverse the hash to obtain the original data  
 
-A hash function acts as a digital fingerprint for data.
+---
 
-Key Properties
+## 🔑 Common Hash Functions
 
-Deterministic → Same input produces the same output
+| Hash Function | Security Level | Recommended |
+|--------------|--------------|------------|
+| SHA-256      | High         | ✅ Yes (Recommended) |
+| SHA-3        | High         | ✅ Yes (Recommended) |
+| SHA-1        | Low          | ❌ No (Not Recommended) |
+| MD5          | Very Low     | ❌ No (Not Recommended) |
 
-Avalanche Effect → Small change causes large hash difference
+---
 
-One-Way Function → Cannot reverse hash to original data
+## 🛡 Why SHA-256 is Secure
 
- Common Hash Functions
- 
-Hash Function &	Security Level	
+- **Collision Resistance** → Extremely unlikely that two inputs share the same hash  
+- **Pre-image Resistance** → Cannot reverse-engineer the original data  
+- **Avalanche Effect** → Tiny input changes drastically alter the output  
+- **Mathematical Complexity** → Built on a strong cryptographic structure  
 
-SHA-256	High	✅ Yes (Recommended)
+---
 
-SHA-3	High	✅ Yes (Recommended)
+## 🚀 Key Takeaway
 
-SHA-1	Low	❌ No (Not Recommended)
-
-MD5	Very Low	❌ No (Not Recommended)
-
-Why SHA-256 is Secure
-
-Collision Resistance → Extremely unlikely two inputs share the same hash
-
-Pre-image Resistance → Cannot reverse-engineer original data
-
-Avalanche Effect → Tiny input change drastically alters output
-
-Mathematical Complexity → Strong cryptographic structure
-
-
-## Key Takeaway
-
-The foundation of data integrity and trust in cybersecurity, If the data changes, its cryptographic fingerprint changes — and the signature fails.
-
-
+> The foundation of data integrity and trust in cybersecurity:  
+> **If the data changes, its cryptographic fingerprint changes — and the signature fails.**
