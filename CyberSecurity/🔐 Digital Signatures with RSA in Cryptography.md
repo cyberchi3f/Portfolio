@@ -39,41 +39,59 @@ The lab environment includes the following files:
 - `document.txt` → Additional file  
 
 List files in your working directory:
+
 <img width="554" height="132" alt="image" src="https://github.com/user-attachments/assets/ea26c0da-2111-4d2f-b772-ce75584ab8f4" />
 
 content of the text files 
+
 <img width="542" height="121" alt="image" src="https://github.com/user-attachments/assets/e507bae3-6083-4d8d-b268-87a1020a2c59" />
 
 ls -l
-✍️ Step 1: Sign Message with Private Key
 
+ ---
+
+## Step 1: Sign Message with Private Key
+ 
 Generate a digital signature for message.txt:
 
 <img width="613" height="47" alt="image" src="https://github.com/user-attachments/assets/5d4987fc-b4eb-4a57-bf10-22eacb3e417d" />
 
+---
 
  Command Breakdown
 openssl dgst → Performs hashing (digest operation)
--sha256 → Uses SHA-256 hashing algorithm
--sign private.pem → Signs using the private key
--out signature.bin → Outputs the signature file
+
+sha256 → Uses SHA-256 hashing algorithm
+
+sign private.pem → Signs using the private key
+
+out signature.bin → Outputs the signature file
+
 message.txt → Input file to sign
+
+---
 
 Verify the signature file exists:
 
 <img width="551" height="145" alt="image" src="https://github.com/user-attachments/assets/523432c4-8ee7-4dc2-8d79-35ff0e07a9e8" />
 
+---
 
-✅ ## Step 2: Verify Signature with Public Key
+## Step 2: Verify Signature with Public Key
 
 Verify the signature using the public key:
 
 <img width="666" height="74" alt="image" src="https://github.com/user-attachments/assets/5906c270-33ce-4647-98d4-75bd29fd05b9" />
+ ---
 
-🔍 Command Breakdown
--verify public.pem → Uses public key for verification
--signature signature.bin → Signature file
+Command Breakdown
+verify public.pem → Uses public key for verification
+
+signature signature.bin → Signature file
+
 message.txt → Original message
+
+---
 
 ✔ Expected Output
 Verified OK
@@ -82,11 +100,14 @@ Verified OK
 
 The message is authentic
 The message has not been altered
-📄 Step 3: Sign Another File
+
+## Step 3: Sign Another File
 
 Sign document.txt:
 
 <img width="659" height="61" alt="image" src="https://github.com/user-attachments/assets/17d4592b-e329-4815-8d6e-b1ccfbafcc29" />
+
+---
 
 Confirm file creation:
 
@@ -99,7 +120,9 @@ Let's create the signature and save it to a file named document.sig.
 
 <img width="620" height="54" alt="image" src="https://github.com/user-attachments/assets/cd8b0de7-c4bb-41d5-95b2-4be72c3de57d" />
 
-⚠️ Step 4: Test Signature Tampering
+---
+
+## Step 4: Test Signature Tampering
 
 Modify the file:
 
@@ -111,6 +134,7 @@ Verify the modified file:
 
 ❌ Expected Output
 Verification failure
+
 
 🔬 Why Tampering Breaks the Signature
 🔐 Signing Process
@@ -133,11 +157,11 @@ Avalanche Effect → Small change causes large hash difference
 One-Way Function → Cannot reverse hash to original data
 
 🔑 Common Hash Functions
-Hash Function	Security Level	Recommended
-SHA-256	High	✅ Yes
-SHA-3	High	✅ Yes
-SHA-1	Low	❌ No
-MD5	Very Low	❌ No
+Hash Function	Security Level	
+SHA-256	High	✅ Yes (Recommended)
+SHA-3	High	✅ Yes (Recommended)
+SHA-1	Low	❌ No (Not Recommended)
+MD5	Very Low	❌ No (Not Recommended)
 
 🛡 Why SHA-256 is Secure
 Collision Resistance → Extremely unlikely two inputs share the same hash
