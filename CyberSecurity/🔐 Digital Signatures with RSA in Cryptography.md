@@ -175,5 +175,5 @@ A hash function acts as a **digital fingerprint** for data.
 
 ## 🚀 Key Takeaway
 
-> The foundation of data integrity and trust in cybersecurity:  
-> **If the data changes, its cryptographic fingerprint changes — and the signature fails.**
+ The foundation of data integrity and trust in cybersecurity:  
+ **If the data changes, its cryptographic fingerprint changes the signature fails.**
