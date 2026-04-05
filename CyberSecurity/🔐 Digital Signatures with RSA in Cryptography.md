@@ -124,42 +124,61 @@ Verify the modified file:
 ❌ Expected Output
 Verification failure
 
+---
 
-🔬 Why Tampering Breaks the Signature
-🔐 Signing Process
-The file is hashed → creates a unique digital fingerprint
-The hash is encrypted using the private key → signature
-🔎 Verification Process
-Signature is decrypted using the public key
-A new hash is generated from the current file
-Both hashes are compared
+Why Tampering Breaks the Signature
+
+ Signing Process
+-The file is hashed → creates a unique digital fingerprint
+
+-The hash is encrypted using the private key → signature
+
+ Verification Process
+
+-Signature is decrypted using the public key
+
+-A new hash is generated from the current file
+
+-Both hashes are compared
 
 ➡ If the file changes, the hash changes → verification fails
 
-🧮 Understanding Hash Functions
+Understanding Hash Functions
 
 A hash function acts as a digital fingerprint for data.
 
 Key Properties
+
 Deterministic → Same input produces the same output
+
 Avalanche Effect → Small change causes large hash difference
+
 One-Way Function → Cannot reverse hash to original data
 
-🔑 Common Hash Functions
-Hash Function	Security Level	
+ Common Hash Functions
+ 
+Hash Function &	Security Level	
+
 SHA-256	High	✅ Yes (Recommended)
+
 SHA-3	High	✅ Yes (Recommended)
+
 SHA-1	Low	❌ No (Not Recommended)
+
 MD5	Very Low	❌ No (Not Recommended)
 
-🛡 Why SHA-256 is Secure
+Why SHA-256 is Secure
+
 Collision Resistance → Extremely unlikely two inputs share the same hash
+
 Pre-image Resistance → Cannot reverse-engineer original data
+
 Avalanche Effect → Tiny input change drastically alters output
+
 Mathematical Complexity → Strong cryptographic structure
 
 
-🚀 Key Takeaway
+## Key Takeaway
 
 The foundation of data integrity and trust in cybersecurity, If the data changes, its cryptographic fingerprint changes — and the signature fails.
 
