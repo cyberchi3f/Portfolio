@@ -59,6 +59,7 @@ Generate a digital signature for message.txt:
 ---
 
  Command Breakdown
+ 
 `openssl dgst` → Performs hashing (digest operation)
 
 `sha256` → Uses SHA-256 hashing algorithm
@@ -85,6 +86,7 @@ Verify the signature using the public key:
  ---
 
 Command Breakdown
+
 `verify public.pem` → Uses public key for verification
 
 `signature signature.bin` → Signature file
@@ -102,8 +104,8 @@ Sign document.txt:
 
 <img width="659" height="61" alt="image" src="https://github.com/user-attachments/assets/17d4592b-e329-4815-8d6e-b1ccfbafcc29" />
 
-
 Confirm file creation:
+
 <img width="553" height="161" alt="image" src="https://github.com/user-attachments/assets/c25ce3e8-7361-425b-ae88-e7f1f88e3eb5" />
 
 Sign File with Private Key
