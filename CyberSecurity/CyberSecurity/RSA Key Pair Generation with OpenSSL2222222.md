@@ -34,8 +34,12 @@ openssl genrsa -out private.pem 2048
 Explanation
 
 openssl → The cryptography toolkit we are using
+
 genrsa → Command to generate an RSA private key
+
 -out private.pem → Saves the private key to a file named private.pem
+
 2048 → Creates a 2048-bit key (a widely used secure key size)
+
 
 After running the command, you can view the private key:
