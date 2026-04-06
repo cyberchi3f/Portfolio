@@ -1,6 +1,6 @@
 # 🔐 Securing Router Remote Access Using SSH Version 2
 
-> **Lab Objective:** Configure secure remote administrative access to a Cisco router using Secure Shell (SSH) Version 2 — replacing insecure legacy protocols with a modern, encrypted, and resilient security standard.
+> **Lab Objective:** Configure secure remote administrative access to a Cisco router using Secure Shell (SSH) Version 2  replacing insecure legacy protocols with a modern, encrypted, and resilient security standard.
 
 ---
 
@@ -36,7 +36,7 @@
 
 ## 📖 Background
 
-Remote administration is a critical network management function. Early implementations of SSH — such as **SSH Version 1.99** — were transitional and included legacy components from SSH Version 1, which are vulnerable to cryptographic attacks.
+Remote administration is a critical network management function. Early implementations of SSH — such as **SSH Version 1.99** were transitional and included legacy components from SSH Version 1, which are vulnerable to cryptographic attacks.
 
 **SSH Version 2** was developed to address these weaknesses by introducing:
 - Stronger encryption algorithms
@@ -54,11 +54,12 @@ Remote administration is a critical network management function. Early implement
 The router is placed into global configuration mode to allow system-level security configurations to be applied.
 
 ```cisco
-R1> enable
-R1# configure terminal
-R1(config)#
+R0> enable
+R0# configure terminal
+R0(config)#
 ```
 <img width="695" height="75" alt="image" src="https://github.com/user-attachments/assets/aa1071f7-7094-4efb-be4d-e8b70667817d" />
+
 > **Figure 1:** Router R1 in Global Configuration Mode
 
 ---
@@ -190,8 +191,6 @@ R2# ssh -l admin -v 2 192.168.1.1
 ```
 <img width="659" height="200" alt="image" src="https://github.com/user-attachments/assets/5c4ea38a-9fa6-4333-ba1d-ce07848dbb9b" />
 
-
-<img width="429" height="173" alt="image" src="https://github.com/user-attachments/assets/376a7f60-5bdd-4969-a5a8-56215926908e" />
 
 > **Figure 9:** Successful SSH Login from Client PC
 
