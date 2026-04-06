@@ -26,3 +26,8 @@ Run the following command to create your RSA key pair:
 
 ```bash
 openssl genrsa -out private.pem 2048
+
+```
+
+<img width="919" height="205" alt="2026-04-04 06_24_58-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/e8460fca-b996-479e-b30a-3d72edbf4440" />
+
