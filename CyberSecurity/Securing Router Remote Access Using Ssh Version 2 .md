@@ -42,6 +42,8 @@ Remote administration is a critical network management function. Early implement
 - Stronger encryption algorithms
 - Improved integrity checking
 - Secure key exchange mechanisms
+  
+<img width="518" height="270" alt="image" src="https://github.com/user-attachments/assets/8fa9bb42-ac78-4733-9350-57b4959423fd" />
 
 ---
 
@@ -56,7 +58,7 @@ R1> enable
 R1# configure terminal
 R1(config)#
 ```
-
+<img width="695" height="75" alt="image" src="https://github.com/user-attachments/assets/aa1071f7-7094-4efb-be4d-e8b70667817d" />
 > **Figure 1:** Router R1 in Global Configuration Mode
 
 ---
@@ -68,6 +70,7 @@ A domain name is configured to establish a unique device identity. This step is 
 ```cisco
 R1(config)# ip domain-name example.com
 ```
+<img width="416" height="30" alt="image" src="https://github.com/user-attachments/assets/830d55c1-ebcd-4081-8e6e-cad2a4ecf5f8" />
 
 > **Figure 2:** Configured Domain Name on Router R1
 
@@ -80,6 +83,7 @@ A local administrative user is created with an encrypted password. This ensures 
 ```cisco
 R1(config)# username admin privilege 15 secret <your-password>
 ```
+<img width="798" height="34" alt="image" src="https://github.com/user-attachments/assets/59f0c073-6804-4cd2-bdde-c3e565e02a26" />
 
 > **Figure 3:** Local User Configuration on Router R1
 
@@ -92,6 +96,7 @@ RSA keys are generated to enable encrypted communication between the router and 
 ```cisco
 R1(config)# crypto key generate rsa modulus 2048
 ```
+<img width="811" height="195" alt="image" src="https://github.com/user-attachments/assets/e7badfa4-989c-49d0-8d14-18c1330e6078" />
 
 > **Figure 4:** RSA Key Generation Process
 
@@ -104,6 +109,7 @@ SSH Version 2 is explicitly enabled to ensure the router does **not** fall back 
 ```cisco
 R1(config)# ip ssh version 2
 ```
+<img width="638" height="61" alt="image" src="https://github.com/user-attachments/assets/99768bcb-3ee7-45d2-8e28-89ad635c1f76" />
 
 > **Figure 5:** SSH Version 2 Enabled on Router R1
 
@@ -117,6 +123,7 @@ Timeout and authentication retry limits are configured to reduce exposure to **b
 R1(config)# ip ssh time-out 60
 R1(config)# ip ssh authentication-retries 3
 ```
+<img width="523" height="59" alt="image" src="https://github.com/user-attachments/assets/94bfc537-9c11-4486-8edf-80c468cca2ee" />
 
 > **Figure 6:** SSH Timeout and Authentication Retry Configuration
 
@@ -132,6 +139,8 @@ R1(config-line)# login local
 R1(config-line)# transport input ssh
 R1(config-line)# exit
 ```
+<img width="408" height="134" alt="image" src="https://github.com/user-attachments/assets/d319b9ae-8820-4c36-a187-22ec3213a11c" />
+
 
 > **Figure 7:** VTY Line Configuration for SSH Access
 
@@ -170,6 +179,7 @@ SSH Version 1.99 is a backward-compatibility mode that supports SSH Version 1 fe
 ```cisco
 R1# show ip ssh
 ```
+<img width="425" height="45" alt="image" src="https://github.com/user-attachments/assets/6c8521ea-070b-4b4e-a659-64e6678c04ed" />
 
 > **Figure 8:** SSH Status Verification on Router R1
 
@@ -178,8 +188,13 @@ R1# show ip ssh
 ```cisco
 R2# ssh -l admin -v 2 192.168.1.1
 ```
+<img width="659" height="200" alt="image" src="https://github.com/user-attachments/assets/5c4ea38a-9fa6-4333-ba1d-ce07848dbb9b" />
+
+
+<img width="429" height="173" alt="image" src="https://github.com/user-attachments/assets/376a7f60-5bdd-4969-a5a8-56215926908e" />
 
 > **Figure 9:** Successful SSH Login from Client PC
+
 
 ---
 
@@ -218,5 +233,3 @@ By enforcing modern cryptographic standards, generating 2048-bit RSA keys, and r
 `cisco` `networking` `ssh` `cybersecurity` `router-security` `cryptography` `rsa` `remote-access` `vty` `ccna` `network-hardening`
 
 ---
-
-*Lab documented as part of a cybersecurity portfolio. All configurations were implemented in a controlled lab environment.*
