@@ -177,13 +177,3 @@ Scanning systems without explicit written permission from the system owner is il
 
 The author assumes no liability for misuse. Always obtain proper authorisation before conducting any security assessment.
 
----
-
-## 🗺️ Roadmap
-
-- [ ] UDP port scanning support  
-- [ ] OS fingerprinting (TTL-based)  
-- [ ] JSON / CSV output export  
-- [ ] CVE lookup for detected services  
-- [ ] Nmap-style aggressive scan mode  
-
