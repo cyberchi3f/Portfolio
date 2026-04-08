@@ -20,6 +20,7 @@ Generate the shared public DH parameters (`p` and `g`) that both parties will us
 ```bash
 openssl dhparam -out dhparam.pem 2048
 ```
+<img width="1020" height="538" alt="image" src="https://github.com/user-attachments/assets/04de1d57-9a7e-47c7-9640-71dcaf032875" />
 
 **Command breakdown:**
 
@@ -47,6 +48,7 @@ Simulate **Party A** generating its private key (secret `a`) and deriving a corr
 ```bash
 openssl genpkey -paramfile dhparam.pem -out a_private_key.pem
 ```
+<img width="799" height="82" alt="image" src="https://github.com/user-attachments/assets/b25e678b-7b66-435f-a5b4-4b33d111b58a" />
 
 | Flag / Argument | Description |
 |---|---|
@@ -192,7 +194,7 @@ This protocol is a foundational building block of secure communication systems, 
 
 
 
-<img width="1020" height="538" alt="image" src="https://github.com/user-attachments/assets/04de1d57-9a7e-47c7-9640-71dcaf032875" />
+
 
 
 <img width="801" height="71" alt="image" src="https://github.com/user-attachments/assets/1a0f2a87-e9c9-4fca-94c7-60a30c767519" />
