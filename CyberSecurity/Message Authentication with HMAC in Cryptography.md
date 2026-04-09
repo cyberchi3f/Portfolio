@@ -1,10 +1,10 @@
-# HMAC — Hash-based Message Authentication Code Lab
+# Message Authentication with HMAC in Cryptography
 
 A practical, hands-on walkthrough of HMAC (Hash-based Message Authentication Code) using the `openssl` command-line tool and Python. This lab covers the core concepts behind data integrity and authenticity, and demonstrates how HMAC protects against message tampering and forgery.
 
 ---
 
-## What is HMAC?
+## What is HMAC? (Hash-based Message Authentication)
 
 A standard hash function like SHA-256 ensures **data integrity** — if a message changes, so does its hash. However, it does not guarantee **authenticity**, because an attacker can modify a message and simply recompute a new hash.
 
