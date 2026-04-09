@@ -7,7 +7,6 @@ A hands-on simulation of the Diffie-Hellman (DH) key exchange protocol using the
 ## Prerequisites
 
 - OpenSSL installed and available in your terminal
-- All commands are executed from the default `~/project` directory
 
 ---
 
@@ -17,9 +16,6 @@ A hands-on simulation of the Diffie-Hellman (DH) key exchange protocol using the
 
 Generate the shared public DH parameters (`p` and `g`) that both parties will use. OpenSSL handles the complex prime-finding mathematics internally.
 
-```bash
-openssl dhparam -out dhparam.pem 2048
-```
 <img width="1020" height="538" alt="image" src="https://github.com/user-attachments/assets/04de1d57-9a7e-47c7-9640-71dcaf032875" />
 
 **Command breakdown:**
@@ -30,12 +26,14 @@ openssl dhparam -out dhparam.pem 2048
 | `-out dhparam.pem` | Saves output to `dhparam.pem` |
 | `2048` | Bit length of the prime modulus `p` |
 
-> ⏳ This command may take a minute to complete. You will see the following while it works:
+>  This command may take a minute to complete. You will see the following while it works:
 > ```
 > Generating DH parameters, 2048 bit long safe prime
 > ```
 
 **Output:** A file named `dhparam.pem` containing the public parameters both parties will use.
+
+<img width="413" height="86" alt="image" src="https://github.com/user-attachments/assets/3c944e10-893c-40fc-9915-b2d0aacd3abd" />
 
 ---
 
@@ -45,10 +43,8 @@ Simulate **Party A** generating its private key (secret `a`) and deriving a corr
 
 **Generate Party A's private key:**
 
-```bash
-openssl genpkey -paramfile dhparam.pem -out a_private_key.pem
-```
-<img width="799" height="82" alt="image" src="https://github.com/user-attachments/assets/b25e678b-7b66-435f-a5b4-4b33d111b58a" />
+<img width="796" height="68" alt="image" src="https://github.com/user-attachments/assets/ee880e9f-9eb4-4add-98af-9b78298bad00" />
+
 
 | Flag / Argument | Description |
 |---|---|
@@ -58,9 +54,8 @@ openssl genpkey -paramfile dhparam.pem -out a_private_key.pem
 
 **Extract Party A's public key:**
 
-```bash
-openssl pkey -in a_private_key.pem -pubout -out a_public_key.pem
-```
+<img width="837" height="84" alt="image" src="https://github.com/user-attachments/assets/653cde4b-cf64-467b-bcb5-5f51b2026a20" />
+
 
 | Flag / Argument | Description |
 |---|---|
@@ -70,6 +65,8 @@ openssl pkey -in a_private_key.pem -pubout -out a_public_key.pem
 | `-out a_public_key.pem` | Saves the public key to `a_public_key.pem` |
 
 **Output files:**
+
+<img width="633" height="98" alt="image" src="https://github.com/user-attachments/assets/e94fd19a-b868-4999-9743-10aa9f03a29e" />
 
 | File | Visibility |
 |---|---|
@@ -84,17 +81,15 @@ Perform the same key generation process for **Party B**, independently, using th
 
 **Generate Party B's private key:**
 
-```bash
-openssl genpkey -paramfile dhparam.pem -out b_private_key.pem
-```
+<img width="805" height="71" alt="image" src="https://github.com/user-attachments/assets/6de80259-aa72-4711-9ba4-d9f534a3c1cc" />
 
 **Extract Party B's public key:**
 
-```bash
-openssl pkey -in b_private_key.pem -pubout -out b_public_key.pem
-```
+<img width="835" height="80" alt="image" src="https://github.com/user-attachments/assets/3a0ea7a3-f89e-4e39-9855-11b72b5d616c" />
 
 **Output files:**
+
+<img width="1064" height="99" alt="image" src="https://github.com/user-attachments/assets/7d72555d-1750-479b-b791-1bf173de4107" />
 
 | File | Visibility |
 |---|---|
@@ -111,15 +106,15 @@ Both parties now independently derive a shared secret using their own private ke
 
 **Party A computes the shared secret:**
 
-```bash
-openssl pkeyutl -derive -inkey a_private_key.pem -peerkey b_public_key.pem -out a_shared_secret.bin
-```
+<img width="1252" height="72" alt="image" src="https://github.com/user-attachments/assets/490d51b6-ca71-4fb2-8726-ecc645f1fc71" />
 
 **Party B computes the shared secret:**
 
-```bash
-openssl pkeyutl -derive -inkey b_private_key.pem -peerkey a_public_key.pem -out b_shared_secret.bin
-```
+<img width="1267" height="75" alt="image" src="https://github.com/user-attachments/assets/a5344617-92f2-4754-a68e-0e2dc7c9f07b" />
+
+**Output files:**
+
+<img width="1545" height="92" alt="image" src="https://github.com/user-attachments/assets/f18854b0-0828-4bd3-bfe1-be619452f974" />
 
 **Command breakdown:**
 
@@ -137,24 +132,17 @@ openssl pkeyutl -derive -inkey b_private_key.pem -peerkey a_public_key.pem -out 
 
 Use `cmp` to confirm both secret files are identical:
 
-```bash
-cmp a_shared_secret.bin b_shared_secret.bin
-```
+<img width="605" height="68" alt="image" src="https://github.com/user-attachments/assets/3953d720-3d2b-4ee8-84ff-d83a106b03a6" />
 
 > ✅ **No output = success.** Silence means the files are byte-for-byte identical.
 
 For a visual confirmation, compare the SHA-256 hashes of both files:
+<img width="406" height="64" alt="image" src="https://github.com/user-attachments/assets/93fb9c5a-420c-4fec-b5ec-80ea7345e867" />
 
-```bash
-sha256sum *.bin
-```
 
 **Expected output format** (your actual hashes will differ, but they must match each other):
 
-```
-e3705a4ab5ae5d86f59dfe968f0177b49d5144e2d731dbd8d41b2eda318412ec  a_shared_secret.bin
-e3705a4ab5ae5d86f59dfe968f0177b49d5144e2d731dbd8d41b2eda318412ec  b_shared_secret.bin
-```
+<img width="1057" height="152" alt="image" src="https://github.com/user-attachments/assets/c8853b6d-69dc-4c2b-8519-eacbe56f7d83" />
 
 Matching hashes confirm that both parties independently derived the **same shared secret** — the core proof of a successful Diffie-Hellman exchange.
 
@@ -193,25 +181,3 @@ This protocol is a foundational building block of secure communication systems, 
 
 
 
-
-
-
-
-<img width="801" height="71" alt="image" src="https://github.com/user-attachments/assets/1a0f2a87-e9c9-4fca-94c7-60a30c767519" />
-
-
-<img width="829" height="78" alt="image" src="https://github.com/user-attachments/assets/943a1e62-905c-46ca-bace-ec20f9429c11" />
-
-<img width="819" height="78" alt="image" src="https://github.com/user-attachments/assets/7dc3eec8-5f9f-4498-a28c-853cc30f288f" />
-
-
-<img width="835" height="75" alt="image" src="https://github.com/user-attachments/assets/486f5606-ecc8-4e16-8cf7-31af7a3419c1" />
-
-<img width="1238" height="73" alt="image" src="https://github.com/user-attachments/assets/4d3e3298-5fde-45e5-b0a9-1727f33e7065" />
-
-
-<img width="1254" height="72" alt="image" src="https://github.com/user-attachments/assets/fdb7328a-1353-497c-bb5d-dffb33837666" />
-
-<img width="591" height="81" alt="image" src="https://github.com/user-attachments/assets/7610d0eb-8055-42b4-8d45-d6699703ef9c" />
-
-<img width="1063" height="126" alt="image" src="https://github.com/user-attachments/assets/eb8a5d10-7a9c-4a55-931d-493b2714493c" />
