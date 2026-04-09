@@ -60,7 +60,7 @@ Create a message file and compute its HMAC using the secret key.
 
 <img width="791" height="77" alt="image" src="https://github.com/user-attachments/assets/5bf2618e-c7e2-4000-8a8b-4777d1086631" />
 
-> ⚠️ The `-n` flag prevents `echo` from appending a newline character, which would alter the content and change the resulting HMAC.
+>  The `-n` flag prevents `echo` from appending a newline character, which would alter the content and change the resulting HMAC.
 
 **Compute the HMAC:**
 
@@ -78,10 +78,7 @@ Create a message file and compute its HMAC using the secret key.
 
 **Example output:**
 
-<img width="1116" height="35" alt="image" src="https://github.com/user-attachments/assets/a7d5def2-fb97-4d3c-a06e-391ea8ab4946" />
-
 <img width="1120" height="37" alt="image" src="https://github.com/user-attachments/assets/11f2aac1-b593-4722-92c6-94ce1dc790fc" />
-
 
 This HMAC value would be sent alongside the message to any recipient who shares the same secret key.
 
@@ -101,8 +98,6 @@ Re-running the same command with the same key and message will always produce th
 
 Simulate an incorrect key scenario:
 
-<img width="554" height="69" alt="image" src="https://github.com/user-attachments/assets/268e7553-c441-422a-a794-bdaf5d8f970c" />
-
 <img width="883" height="62" alt="image" src="https://github.com/user-attachments/assets/10181a8b-1f9b-4b68-abf0-99318cdad759" />
 
 **Example output:**
@@ -121,10 +116,10 @@ Modify the message slightly:
 
 <img width="869" height="71" alt="image" src="https://github.com/user-attachments/assets/7eace60a-f34a-45da-a051-84798aaaf2d1" />
 
-<img width="1123" height="93" alt="image" src="https://github.com/user-attachments/assets/ad0aea5c-a860-4ef3-9566-30a6b57a1bc2" />
-
-
 Again, the HMAC will be entirely different. Even a **single character change** produces a completely new digest — integrity is preserved.
+
+<img width="1123" height="93" alt="image" src="https://github.com/user-attachments/assets/edeb8c45-4628-4fee-a515-d7f099d3bcd5" />
+
 
 ---
 
@@ -152,16 +147,15 @@ hex_digest = h.hexdigest()
 print("HMAC Digest:")
 print(hex_digest)
 ```
+<img width="1665" height="650" alt="image" src="https://github.com/user-attachments/assets/ce03373d-5399-4990-9fac-40d6d57b9344" />
 
 Run the script:
 
-```bash
-python3 hmac_example.py
-```
+<img width="468" height="60" alt="image" src="https://github.com/user-attachments/assets/617ea28d-d77a-4b74-b322-f0295a5e1ed9" />
 
 **Expected output:**
 
-<img width="788" height="115" alt="image" src="https://github.com/user-attachments/assets/4ad45673-2e48-4c6b-8afd-003a1b01b0b0" />
+<img width="784" height="61" alt="image" src="https://github.com/user-attachments/assets/9facc57a-ed16-4f33-b3cc-e6a1bb89ba8d" />
 
 
 > 💡 Both the `key` and `message` must be **byte strings** in Python (prefixed with `b`).In production, never hardcode secrets — use a secure secrets manager or environment variables.
