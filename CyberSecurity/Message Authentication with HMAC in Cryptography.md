@@ -30,9 +30,7 @@ Receiver: secret_key + message → HMAC → compare with received HMAC
 
 Generate a cryptographically secure, random 256-bit (32-byte) secret key and store it in an environment variable for use in subsequent commands.
 
-```bash
-export HMAC_KEY=$(openssl rand -hex 32)
-```
+<img width="538" height="67" alt="image" src="https://github.com/user-attachments/assets/ec154592-420b-4d7d-90ad-47c025a7af72" />
 
 **Command breakdown:**
 
@@ -44,15 +42,11 @@ export HMAC_KEY=$(openssl rand -hex 32)
 
 Verify the key was generated:
 
-```bash
-echo $HMAC_KEY
-```
+<img width="387" height="58" alt="image" src="https://github.com/user-attachments/assets/99f1f918-5cc2-46cc-bb4e-e95d32206b95" />
 
 **Example output** (yours will be unique):
 
-```
-0db348c78473ce8460416f875cd87239d0f5f66fbe5103ba4b5c84cf2cd76914
-```
+<img width="783" height="48" alt="image" src="https://github.com/user-attachments/assets/38fa21c6-d39e-47da-8511-7b205f9c5066" />
 
 > 🔑 This key is the foundation of HMAC's security. A predictable or weak key would allow an attacker to forge HMACs.
 
@@ -64,17 +58,13 @@ Create a message file and compute its HMAC using the secret key.
 
 **Create the message file:**
 
-```bash
-echo -n "This is a secret message." > message.txt
-```
+<img width="791" height="77" alt="image" src="https://github.com/user-attachments/assets/5bf2618e-c7e2-4000-8a8b-4777d1086631" />
 
 > ⚠️ The `-n` flag prevents `echo` from appending a newline character, which would alter the content and change the resulting HMAC.
 
 **Compute the HMAC:**
 
-```bash
-openssl dgst -sha256 -mac hmac -macopt hexkey:$HMAC_KEY message.txt
-```
+<img width="879" height="53" alt="image" src="https://github.com/user-attachments/assets/3369858b-9ba4-4022-bedd-a078b86bf58d" />
 
 **Command breakdown:**
 
@@ -88,9 +78,10 @@ openssl dgst -sha256 -mac hmac -macopt hexkey:$HMAC_KEY message.txt
 
 **Example output:**
 
-```
-HMAC-SHA2-256(message.txt)= 214fbb56f716dfe1c2f4a60615a5b901b263fd74c9678b2aef4f01779b34dea8
-```
+<img width="1116" height="35" alt="image" src="https://github.com/user-attachments/assets/a7d5def2-fb97-4d3c-a06e-391ea8ab4946" />
+
+<img width="1120" height="37" alt="image" src="https://github.com/user-attachments/assets/11f2aac1-b593-4722-92c6-94ce1dc790fc" />
+
 
 This HMAC value would be sent alongside the message to any recipient who shares the same secret key.
 
@@ -110,16 +101,15 @@ Re-running the same command with the same key and message will always produce th
 
 Simulate an incorrect key scenario:
 
-```bash
-export WRONG_KEY=$(openssl rand -hex 32)
-openssl dgst -sha256 -mac hmac -macopt hexkey:$WRONG_KEY message.txt
-```
+<img width="554" height="69" alt="image" src="https://github.com/user-attachments/assets/268e7553-c441-422a-a794-bdaf5d8f970c" />
+
+<img width="883" height="62" alt="image" src="https://github.com/user-attachments/assets/10181a8b-1f9b-4b68-abf0-99318cdad759" />
 
 **Example output:**
 
-```
-HMAC-SHA2-256(message.txt)= 781729497e89f3f9cb1d8c7ab632e22753062ac39cd64de0e5b81a45de245d78
-```
+<img width="1126" height="39" alt="image" src="https://github.com/user-attachments/assets/b05a57c4-7816-4423-84d4-846e4b39c9e9" />
+
+<img width="1126" height="39" alt="image" src="https://github.com/user-attachments/assets/27dff961-5269-441a-aa83-1138723aaa06" />
 
 The resulting HMAC is completely different. Without the correct key, it is **computationally infeasible** to produce a valid HMAC — authenticity is preserved.
 
@@ -129,10 +119,10 @@ The resulting HMAC is completely different. Without the correct key, it is **com
 
 Modify the message slightly:
 
-```bash
-echo -n "This is a tampered message." > message.txt
-openssl dgst -sha256 -mac hmac -macopt hexkey:$HMAC_KEY message.txt
-```
+<img width="869" height="71" alt="image" src="https://github.com/user-attachments/assets/7eace60a-f34a-45da-a051-84798aaaf2d1" />
+
+<img width="1123" height="93" alt="image" src="https://github.com/user-attachments/assets/ad0aea5c-a860-4ef3-9566-30a6b57a1bc2" />
+
 
 Again, the HMAC will be entirely different. Even a **single character change** produces a completely new digest — integrity is preserved.
 
@@ -142,7 +132,7 @@ Again, the HMAC will be entirely different. Even a **single character change** p
 
 Python's standard library provides the `hmac` and `hashlib` modules for programmatic HMAC operations, commonly used in web applications and APIs.
 
-Create the script `hmac_example.py`:
+Create the script `hmac_script_example.py`:
 
 ```python
 import hmac
@@ -171,12 +161,10 @@ python3 hmac_example.py
 
 **Expected output:**
 
-```
-HMAC Digest:
-214fbb56f716dfe1c2f4a60615a5b901b263fd74c9678b2aef4f01779b34dea8
-```
+<img width="788" height="115" alt="image" src="https://github.com/user-attachments/assets/4ad45673-2e48-4c6b-8afd-003a1b01b0b0" />
 
-> 💡 Both the `key` and `message` must be **byte strings** in Python (prefixed with `b`). In production, never hardcode secrets — use a secure secrets manager or environment variables.
+
+> 💡 Both the `key` and `message` must be **byte strings** in Python (prefixed with `b`).In production, never hardcode secrets — use a secure secrets manager or environment variables.
 
 ---
 
