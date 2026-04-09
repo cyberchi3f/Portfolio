@@ -70,8 +70,8 @@ Simulate **Party A** generating its private key (secret `a`) and deriving a corr
 
 | File | Visibility |
 |---|---|
-| `a_private_key.pem` | 🔒 Keep secret — never share |
-| `a_public_key.pem` | 🌐 Share with Party B over the insecure channel |
+| `a_private_key.pem` |  Keep secret — never share |
+| `a_public_key.pem` |  Share with Party B over the insecure channel |
 
 ---
 
@@ -93,8 +93,8 @@ Perform the same key generation process for **Party B**, independently, using th
 
 | File | Visibility |
 |---|---|
-| `b_private_key.pem` | 🔒 Keep secret — never share |
-| `b_public_key.pem` | 🌐 Share with Party A over the insecure channel |
+| `b_private_key.pem` |  Keep secret — never share |
+| `b_public_key.pem` |  Share with Party A over the insecure channel |
 
 > At this point, Party A holds `b_public_key.pem`, and Party B holds `a_public_key.pem`. Both private keys remain secret. The public exchange has been simulated.
 
@@ -137,6 +137,7 @@ Use `cmp` to confirm both secret files are identical:
 > ✅ **No output = success.** Silence means the files are byte-for-byte identical.
 
 For a visual confirmation, compare the SHA-256 hashes of both files:
+
 <img width="406" height="64" alt="image" src="https://github.com/user-attachments/assets/93fb9c5a-420c-4fec-b5ec-80ea7345e867" />
 
 
