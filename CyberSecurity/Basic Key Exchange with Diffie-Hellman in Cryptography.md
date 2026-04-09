@@ -16,7 +16,7 @@ A hands-on simulation of the Diffie-Hellman (DH) key exchange protocol using the
 
 Generate the shared public DH parameters (`p` and `g`) that both parties will use. OpenSSL handles the complex prime-finding mathematics internally.
 
-<img width="1020" height="538" alt="image" src="https://github.com/user-attachments/assets/04de1d57-9a7e-47c7-9640-71dcaf032875" />
+<img width="270" height="25" alt="image" src="https://github.com/user-attachments/assets/376be981-ccd8-45f9-a194-d179b2e6759f" />
 
 **Command breakdown:**
 
@@ -27,9 +27,9 @@ Generate the shared public DH parameters (`p` and `g`) that both parties will us
 | `2048` | Bit length of the prime modulus `p` |
 
 >  This command may take a minute to complete. You will see the following while it works:
-> ```
-> Generating DH parameters, 2048 bit long safe prime
-> ```
+
+<img width="1010" height="510" alt="image" src="https://github.com/user-attachments/assets/334ccde7-9fe6-44a2-8a78-8118d99e0689" />
+
 
 **Output:** A file named `dhparam.pem` containing the public parameters both parties will use.
 
