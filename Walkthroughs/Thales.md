@@ -28,6 +28,7 @@ This walkthrough covers a full compromise of the **Miletus** machine — from op
 - An exposed **SSH private key** in the compromised user's home directory
 - A **world-writable root-owned script** (`backup.sh`) scheduled for privileged execution
 
+https://www.vulnhub.com/entry/thales-1,749/
 ---
 
 ## Tools Used
