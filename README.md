@@ -1,130 +1,167 @@
-# 💼 IT Professional Portfolio
-
-Welcome to my GitHub portfolio! I'm passionate about system administration and cybersecurity, and this repository showcases some of the hands-on projects, labs, and tools I've worked with.
-
-## 📁 Categories
-
-### 🔧 System Administrator Projects
-- Windows Server 2019 setup and administration
-- PowerShell scripting & task automation
-- Backup and file management using rsync and robocopy
-
-### 🔐 Cybersecurity Projects
-- Threat hunting using open-source tools
-- SIEM configuration with QRadar
-- Vulnerability assessments and incident response
-
----
-
-> 💡 I'm a lifelong learner committed to improving systems and staying ahead of cyber threats.
-
-Welcome to my GitHub portfolio!
-
-I'm passionate about system administration and cybersecurity, and this repository showcases some of the hands-on projects, labs, and tools I've worked with.
-
-📁 Categories
-🔧 System Administrator Projects
-Windows Server 2019 setup and administration
-PowerShell scripting & task automation
-Backup and file management using rsync and robocopy
-
-🔐 Cybersecurity Projects
-Threat hunting using open-source tools
-SIEM configuration with QRadar
-Vulnerability assessments and incident response
-💡 I'm a lifelong learner committed to improving systems and staying ahead of cyber threats.
-
-
 <div align="center">
 
-# 👋 Hi, I'm Ade
-### Cybersecurity Professional | VAPT Specialist | Security Analyst
+<!-- Animated Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=200&section=header&text=Ade%20%7C%20cyberchi3f&fontSize=50&fontColor=00ff88&fontAlignY=38&desc=VAPT%20Specialist%20%7C%20Security%20Researcher%20%7C%20Founder%20@%20DexAShield%20Technologies&descAlignY=60&descColor=aaaaaa&animation=fadeIn" width="100%" />
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME/cybersecurity-portfolio)
+<!-- Social Badges -->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-simonetim-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonetim)
+[![X / Twitter](https://img.shields.io/badge/X-_cyb3rchi3f-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/_cyb3rchi3f)
+[![Medium](https://img.shields.io/badge/Medium-@simon__Jr-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@simon_Jr)
+[![Portfolio](https://img.shields.io/badge/Portfolio-cyberchi3f-00ff88?style=for-the-badge&logo=github&logoColor=black)](https://github.com/cyberchi3f/Portfolio)
 
-![Profile Views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=brightgreen&style=flat-square)
+![Profile Views](https://komarev.com/ghpvc/?username=cyberchi3f&color=00ff88&style=flat-square&label=PROFILE+VIEWS)
 
 </div>
 
 ---
 
-## 🛡️ About Me
+## `whoami`
 
-I'm a cybersecurity professional based in **Lagos, Nigeria**, specializing in **Vulnerability Assessment & Penetration Testing (VAPT)**, security documentation, and infrastructure security analysis. I help organizations identify, assess, and remediate security weaknesses before adversaries can exploit them.
+```bash
+┌──(cyberchi3f㉿DexAShield)-[~]
+└─$ whoami
 
-- 🔭 Currently working on **enterprise VAPT engagements** across the Nigerian energy & utilities sector
-- 🧠 Deep experience with **web application security**, **network security**, and **firewall assessment**
-- 📄 I produce professional-grade security reports — technical findings, executive summaries & interactive dashboards
-- 🌍 Working within **Nigerian regulatory frameworks**: NDPA 2023, Nigeria Cybercrimes Act 2015, NDPR
-- 🎓 Final Year Project: **FortiGate NGFW Implementation & Security Analysis**
+  Name        : Simon Etim
+  Role        : VAPT Specialist | Security Analyst 
+  Company     : DexAShield Technologies — Lagos, Nigeria
+  Focus       : Offensive Security · Network Defence · Risk Compliance
+  Frameworks  : OWASP · MITRE ATT&CK · ISO/IEC 27001 · PTES · CVSS
+  Regulations : NDPA 2023 · NDPR · Nigeria Cybercrimes Act 2015
+  Philosophy  : "Break it ethically. Fix it permanently."
+```
+
+> I find what attackers find — before they do. As the founder of **DexAShield Technologies**, I lead VAPT engagements, security assessments, and security program development for organizations in Nigeria's energy, utilities, and enterprise sectors. My work sits at the intersection of **offensive tradecraft**, **risk-based reporting**, and **regulatory compliance**.
 
 ---
 
-## 🔬 Core Competencies
+## 🎯 Core Competencies
 
-### Offensive Security
+<table>
+<tr>
+<td valign="top" width="50%">
+
+### 🔴 Offensive Security
+- Vulnerability Assessment & Penetration Testing (VAPT)
+- Web Application Security (OWASP Top 10)
+- Network & Infrastructure Penetration Testing
+- Firewall Configuration Auditing
+- Phishing / Quishing (QR-code) Artifact Analysis
+- Active Directory Enumeration & Attack Simulation
+- CTF Challenge Research (TryHackMe · HackTheBox)
+
+</td>
+<td valign="top" width="50%">
+
+### 🔵 Defensive Security
+- Threat Hunting & SIEM Log Analysis
+- Firewall Assessment (Sophos XG/XGS · FortiGate NGFW)
+- File Integrity Monitoring (FIM) & EDR
+- Incident Response & Phishing Triage
+- Security Awareness Training
+- ISO/IEC 27001 Information Security Program Design
+- Nigerian Regulatory Compliance (NDPA · NDPR · Cybercrimes Act)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Arsenal
+
+### Offensive & Assessment Tools
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white)
-![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-0E83CD?style=flat-square&logo=nmap&logoColor=white)
-
-### Vulnerability Assessment
+![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white)
 ![Nessus](https://img.shields.io/badge/Nessus-00B4E0?style=flat-square&logo=tenable&logoColor=white)
 ![Qualys](https://img.shields.io/badge/Qualys_SSL_Labs-ED2125?style=flat-square&logoColor=white)
-![OWASP](https://img.shields.io/badge/OWASP_Top_10-000000?style=flat-square&logo=owasp&logoColor=white)
-
-### Network & Infrastructure
+![Nexpose](https://img.shields.io/badge/Rapid7_Nexpose-E2251A?style=flat-square&logoColor=white)
+![BloodHound](https://img.shields.io/badge/BloodHound-CC0000?style=flat-square&logoColor=white)
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white)
-![Sophos](https://img.shields.io/badge/Sophos_XG%2FXGS-0073CF?style=flat-square&logoColor=white)
-![FortiGate](https://img.shields.io/badge/FortiGate_NGFW-EE3124?style=flat-square&logo=fortinet&logoColor=white)
 
-### Scripting & Reporting
+### Network & Perimeter Security
+![Sophos XG](https://img.shields.io/badge/Sophos_XG%2FXGS-0073CF?style=flat-square&logoColor=white)
+![FortiGate](https://img.shields.io/badge/FortiGate_NGFW-EE3124?style=flat-square&logo=fortinet&logoColor=white)
+![GNS3](https://img.shields.io/badge/GNS3-00ADEF?style=flat-square&logoColor=white)
+
+
+### Scripting, Reporting & Automation
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+
+### Lab & Learning Platforms
+![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=red)
+![HackTheBox](https://img.shields.io/badge/HackTheBox-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
+![VulnHub](https://img.shields.io/badge/VulnHub-444444?style=flat-square&logoColor=white)
+![PortSwigger](https://img.shields.io/badge/PortSwigger_Academy-FF6633?style=flat-square&logoColor=white)
 
 ---
 
-## 📁 Featured Projects
+## 🗂️ Featured Projects
 
-| # | Project | Description | Key Tools |
-|---|---------|-------------|-----------|
-| 01 | [🌐 Web App VAPT — NIN Verification Portal](https://github.com/YOUR_USERNAME/vapt-web-application) | Full-scope VAPT of a public-facing identity verification portal. Includes SSL/TLS assessment, OWASP Top 10 testing, and interactive findings dashboard | Nmap, Qualys SSL Labs, Burp Suite, OWASP |
-| 02 | [🔥 Firewall Security Assessment](https://github.com/YOUR_USERNAME/firewall-security-assessment) | Comprehensive Sophos XG/XGS firewall configuration review and log analysis with risk-rated findings | Sophos XG, Log Analysis, SIEM |
-| 03 | [📋 VAPT Report Templates](https://github.com/YOUR_USERNAME/vapt-report-templates) | Professional-grade sanitized VAPT report templates: technical PDF, executive Word doc & interactive HTML dashboard | Python, Docx, HTML/CSS |
-| 04 | [🔬 Network Recon Toolkit](https://github.com/YOUR_USERNAME/network-recon-toolkit) | A curated collection of Nmap scan scripts, enumeration checklists, and recon automation for pentest engagements | Nmap, Bash, Python |
-| 05 | [🏁 CTF Writeups](https://github.com/YOUR_USERNAME/ctf-writeups) | Documented solutions to Capture The Flag challenges across TryHackMe and HackTheBox | Kali Linux, Wireshark, Metasploit |
+| # | Project | Description | Stack / Tools |
+|---|---------|-------------|---------------|
+| 🔥 | **IronSentinel — FIM & EDR Platform** | Next-generation File Integrity Monitoring & Endpoint Detection & Response tool, featuring the PADIE engine *(Predictive Attack Chain Reconstruction & Deception Injection)* | Python · MITRE ATT&CK |
+| 🌐 | **Web App VAPT — NIN Verification Portal** | Full-scope web application penetration test against a public-facing identity portal. SSL/TLS assessment, OWASP Top 10 testing, interactive findings dashboard | Nmap · Burp Suite · Qualys · OWASP |
+| 🔥 | **Sophos XG/XGS Firewall Assessment** | Comprehensive firewall configuration review, log parsing, and risk-rated findings with an interactive HTML security dashboard | Sophos XG · Log Analysis · HTML/CSS |
+| 🔬 | **Recon Automation — `recon.sh`** | Multi-stage Bash reconnaissance script automating host discovery, port enumeration, service fingerprinting, and output structuring for pentest engagements | Bash · Nmap |
+| 🐍 | **Python Port Scanner** | Custom port scanner with banner grabbing, structured output, and scan logging. Full portfolio-grade README | Python |
+| 📋 | **VAPT Report Templates** | Sanitized, professional VAPT reporting suite: technical PDF, executive Word document, and interactive HTML findings dashboard | Python · HTML · CSS |
+| 📡 | **Lab READMEs — SSH v2, Diffie-Hellman, HMAC** | Deep-dive protocol labs with full setup documentation, packet captures, and annotated findings | Kali Linux · Wireshark |
 
----
-
-## 🧰 Methodology & Frameworks
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    VAPT Methodology                         │
-│                                                             │
-│  Scoping → Reconnaissance → Scanning → Exploitation →      │
-│  Post-Exploitation → Reporting → Remediation Guidance       │
-└─────────────────────────────────────────────────────────────┘
-```
-
-**Standards & Frameworks I work with:**
-- 📌 OWASP Testing Guide (OTG)
-- 📌 PTES (Penetration Testing Execution Standard)
-- 📌 NIST SP 800-115
-- 📌 ISO/IEC 27001
-- 📌 CIS Controls
+> 📁 **[View Full Portfolio →](https://github.com/cyberchi3f/Portfolio)**
 
 ---
 
-## 📜 Certifications & Education
 
-| Certification | Issuing Body | Year |
-|---|---|---|
-| *(Add your certs here)* | | |
-| B.Sc. Computer Science / IT | *(Your University)* | *(Year)* |
+## 💼 Professional Experience
+
+**🛡️ Founder & Lead VAPT Specialist — DexAShield Technologies** *(Lagos, Nigeria)*
+- Delivering end-to-end VAPT engagements: scoping through final reporting
+- Producing executive security reports and interactive HTML findings dashboards
+- Building and maintaining a 10-policy ISO/IEC 27001-aligned Information Security Program
+
+**🔌 Cybersecurity & Data Analyst — EKEDC (Eko Electricity Distribution Company)**
+- Conducting firewall assessments on the Sophos XG/XGS estate
+- Performing phishing & quishing artifact analysis and incident triage
+- Developing cybersecurity awareness content and AI acceptable use policy documentation
+
+---
+
+## 💻 System Administration *(Supporting Competency)*
+
+<details>
+<summary>Click to expand</summary>
+
+### Platforms & Virtualization
+![Windows Server](https://img.shields.io/badge/Windows_Server_2019-0078D6?style=flat-square&logo=windows&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware_Workstation-607078?style=flat-square&logo=vmware&logoColor=white)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=flat-square&logo=virtualbox&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+
+### Highlights
+- **Windows Server 2019** — Domain setup, Active Directory administration, GPO configuration
+- **Dual-hypervisor home lab** — VMware Workstation + VirtualBox on a single Windows host, custom VMnet subnets
+- **Automation** — PowerShell scripting, task scheduling, rsync/robocopy backup pipelines
+- **Networking** — Cross-platform VM networking, VLAN segmentation, DHCP/DNS configuration
+
+</details>
+
+---
+
+## ✍️ Writing & Research
+
+I write about cybersecurity trends, digital safety, and practical security concepts on Medium.
+
+| Article | Topic |
+|---------|-------|
+| [Promoting a Safer Internet: Why World Internet Day Matters](https://medium.com/@simon_Jr/promoting-a-safer-internet-why-world-internet-day-matters-ca406000fb22) | Internet Safety & Digital Rights |
+| [Protecting Our Digital World, One Byte at a Time](https://medium.com/@simon_Jr/protecting-our-digital-world-one-byte-at-a-time-db1cdf5b525c) | Security Awareness |
+| [USB Condoms to the Rescue!](https://medium.com/@simon_Jr/the-ultimate-protection-for-your-digital-assets-usb-condoms-to-the-rescue-321b5d3111f6) | Physical Security / Juice Jacking |
+| [Is Your Phone Getting Juiced or Jacked?](https://medium.com/@simon_Jr/is-your-phone-getting-juiced-or-jacked-the-shocking-truth-about-public-charging-stations-fd04a2f1f332) | Public Charging Station Attacks |
+
+> 📰 **[Read more on Medium →](https://medium.com/@simon_Jr)**
 
 ---
 
@@ -132,11 +169,10 @@ I'm a cybersecurity professional based in **Lagos, Nigeria**, specializing in **
 
 <div align="center">
 
-![Ade's GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00ff88)
+<img src="https://github-readme-stats.vercel.app/api?username=cyberchi3f&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00ff88&text_color=aaaaaa" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cyberchi3f&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=aaaaaa" height="165" />
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff88)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=dark&hide_border=true&background=0d1117&ring=00ff88&fire=00ff88&currStreakLabel=00ff88)
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=cyberchi3f&theme=dark&hide_border=true&background=0d1117&ring=00ff88&fire=00ff88&currStreakLabel=00ff88" />
 
 </div>
 
@@ -144,14 +180,22 @@ I'm a cybersecurity professional based in **Lagos, Nigeria**, specializing in **
 
 ## 🤝 Let's Connect
 
-I'm open to collaborations, freelance VAPT engagements, and cybersecurity discussions.
-
-> *"Security is not a product, but a process."* — Bruce Schneier
+I'm open to **freelance VAPT engagements**, **security consulting**, **collaborations**, and **speaking opportunities** in the Nigerian and West African cybersecurity space.
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Email](https://img.shields.io/badge/Send_an_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonetim)
+[![X / Twitter](https://img.shields.io/badge/Follow_on_X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/_cyb3rchi3f)
+[![Medium](https://img.shields.io/badge/Read_on_Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@simon_Jr)
 
 </div>
 
+---
+
+<div align="center">
+
+> *"The quieter you become, the more you are able to hear."* — Kali Linux
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=100&section=footer" width="100%"/>
+
+</div>
