@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=200&section=header&text=Ade%20%7C%20cyberchi3f&fontSize=50&fontColor=00ff88&fontAlignY=38&desc=VAPT%20Specialist%20%7C%20Security%20Researcher%20%7C%20Founder%20@%20DexAShield%20Technologies&descAlignY=60&descColor=aaaaaa&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=200&section=header&text=SimonEtim%20%7C%20cyberchi3f&fontSize=50&fontColor=00ff88&fontAlignY=38&desc=VAPT%20Specialist%20%7C%20Security%20Researcher%20%7C%20Founder%20@%20DexAShield%20Technologies&descAlignY=60&descColor=aaaaaa&animation=fadeIn" width="100%" />
 
 <!-- Social Badges -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-simonetim-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonetim)
