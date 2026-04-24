@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=180&section=header&text=Simon%20Etim%20%7C%20cyberchi3f&fontSize=42&fontColor=00ff88&fontAlignY=40&desc=Cybersecurity%20Professional%20%7C%20VAPT%20Specialist%20%7C%20Lagos%2C%20Nigeria&descAlignY=62&descColor=aaaaaa" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=180&section=header&text=Simon%20Etim&fontSize=42&fontColor=00ff88&fontAlignY=40&desc=Cybersecurity%20Professional%20%7C%20VAPT%20Specialist&descAlignY=62&descColor=aaaaaa" width="100%" />
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-simonetim-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonetim)
 [![Portfolio](https://img.shields.io/badge/Portfolio-cyberchi3f-00ff88?style=for-the-badge&logo=github&logoColor=black)](https://github.com/cyberchi3f/Portfolio)
@@ -22,22 +22,12 @@ assessment & penetration testing (VAPT), threat and risk management, firewall
 analysis, and security incident triage. I help organizations identify weaknesses
 before adversaries do — and I document every finding with precision.
 
-  📍 Lagos, Nigeria
+  
   🎯 Specialization  : VAPT · Threat & Vulnerability Management · GRC
   📐 Frameworks      : MITRE ATT&CK · NIST CSF · OWASP · CVSS
-  🔭 Currently       : IT Risk & Management Intern @ EKEDC
 ```
 
 ---
-
-## 💼 Experience
-
-| Period | Role | Organization |
-|--------|------|--------------|
-| Dec 2025 – Apr 2026 | IT Risk & Management Intern | Eko Electricity Distribution Plc (EKEDC) |
-| Jul 2025 – Dec 2025 | Vulnerability Assessment & Penetration Tester | Sardonyx Technologies |
-| Jun 2023 – Apr 2025 | Cybersecurity Engineer *(Hybrid)* | ITstack Limited |
-| Sep 2016 – Nov 2022 | Office Assistant / Technical Support | African Steel Mills Nig. Ltd |
 
 ### Highlights
 
@@ -68,22 +58,21 @@ before adversaries do — and I document every finding with precision.
 
 ## 🏅 Certifications
 
-| Certification | Status |
-|---------------|--------|
-| Junior GRC Analyst *(JGA)* | 🔄 2026 — In View |
-| Certified Cybersecurity Educator Professional *(CCEP)* | ✅ 2025 |
-| Certified Ransomware Protection Officer *(CRPO)* | ✅ 2024 |
-| Certified Network Security Practitioner *(CNSP)* | ✅ 2024 |
-| Certified AppSec Practitioner *(CAP)* | ✅ 2023 |
-| Certified in Cybersecurity *(CC)* — ISC² | ✅ 2020 |
-| CompTIA Security+ | ✅ |
-| Certified Network Security Specialist *(CNSS)* | ✅ |
+| Certification 
+
+ Junior GRC Analyst *(JGA)* 
+ Certified Cybersecurity Educator Professional *(CCEP)* 
+ Certified Ransomware Protection Officer *(CRPO)* 
+ Certified Network Security Practitioner *(CNSP)*| Certified AppSec Practitioner *(CAP)*|
+ Certified in Cybersecurity *(CC)* — ISC² 
+ CompTIA Security+  
+ Certified Network Security Specialist *(CNSS)* 
 
 ---
 
 ## 🎓 Education & Training
 
-- 🎓 **B.Sc. Mathematics & Computer Science** — National Open University of Nigeria *(Member, NACOS)*
+- 🎓 **B.Sc. Mathematics & Computer Science** — National Open University of Nigeria 
 - 📜 Google Cybersecurity Professional Certificate
 - 📜 IBM Cybersecurity Analyst Professional Certificate
 - 📜 Fortinet Network Security Professional *(NSE 1–3)*
@@ -93,17 +82,10 @@ before adversaries do — and I document every finding with precision.
 
 ---
 
-## 📁 Portfolio
-
-> Everything I build lives here — labs, VAPT reports, scripts, walkthroughs, and automation tools.
-
-**[🔗 github.com/cyberchi3f/Portfolio](https://github.com/cyberchi3f/Portfolio)**
-
----
-
 <div align="center">
 
 *"Break it ethically. Fix it permanently."*
+
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=100&section=footer" width="100%" />
 
