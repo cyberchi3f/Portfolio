@@ -77,7 +77,7 @@ before adversaries do — and I document every finding with precision.
 
 ## 🎓 Education & Training
 
-- 🎓 **B.Sc. Mathematics & Computer Science** — National Open University of Nigeria 
+-  B.Sc. Mathematics & Computer Science
 - 📜 Google Cybersecurity Professional Certificate
 - 📜 IBM Cybersecurity Analyst Professional Certificate
 - 📜 Fortinet Network Security Professional *(NSE 1–3)*
