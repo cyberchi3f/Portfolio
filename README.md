@@ -61,10 +61,15 @@ before adversaries do — and I document every finding with precision.
 | Certification 
 
  Junior GRC Analyst *(JGA)* 
+ 
  Certified Cybersecurity Educator Professional *(CCEP)* 
+ 
  Certified Ransomware Protection Officer *(CRPO)* 
+ 
  Certified Network Security Practitioner *(CNSP)*| Certified AppSec Practitioner *(CAP)*|
+ 
  Certified in Cybersecurity *(CC)* — ISC² 
+ 
  CompTIA Security+  
  Certified Network Security Specialist *(CNSS)* 
 
