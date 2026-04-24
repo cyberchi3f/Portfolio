@@ -58,7 +58,6 @@ before adversaries do — and I document every finding with precision.
 
 ## 🏅 Certifications
 
-| Certification 
 
  Junior GRC Analyst *(JGA)* 
  
@@ -66,11 +65,12 @@ before adversaries do — and I document every finding with precision.
  
  Certified Ransomware Protection Officer *(CRPO)* 
  
- Certified Network Security Practitioner *(CNSP)*| Certified AppSec Practitioner *(CAP)*|
+ Certified Network Security Practitioner *(CNSP)*| Certified AppSec Practitioner *(CAP)*
  
  Certified in Cybersecurity *(CC)* — ISC² 
  
  CompTIA Security+  
+
  Certified Network Security Specialist *(CNSS)* 
 
 ---
