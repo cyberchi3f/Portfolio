@@ -164,7 +164,7 @@ The output returns raw JPEG metadata and binary artifact strings — no clear em
 
 <img width="901" height="517" alt="2026-05-19 20_14_05-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/8f7f6fb1-b496-455f-91ce-2289a375c139" />
 
-**Result:** All four return: `steghide: could not extract any data with that passphrase!`
+**Result:** I used the filename without the file extension as the passphrase during the extraction process. All four return: `steghide: could not extract any data with that passphrase!`
 
 > 💡 **Pivot point:** Steganography with a known passphrase might succeed, but for now we have no passphrase. The filenames themselves become our next wordlist seed — a CTF methodology pivot.
 
@@ -179,26 +179,6 @@ Rather than using generic wordlists like `rockyou.txt`, the attack surface itsel
 The filenames and page names from the web server provide natural candidates:
 
 <img width="666" height="159" alt="2026-05-19 20_21_28-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/1361d436-39d6-43e2-a926-3a445f8641c3" />
-
-
-```bash
-# Create initial wordlist from known names
-cat > wordlist3 << EOF
-broken
-gallery
-5terre
-forest
-lights
-mountains
-EOF
-```
-
-Or via command pipeline:
-
-```bash
-cat wordlists | sed s/img_// > wordlist3
-vi wordlist3
-```
 
 **Contents of `wordlist3`:**
 ```
@@ -270,8 +250,8 @@ SSH prompts for host key verification (first connection) — accepted. Password 
 Notable files in `/home/broken`:
 
 ```
--rw——————   .bash_history     (3.6K — Jan 1 2018)
--rw-r--r--  .sudo_as_admin_successful   (0 bytes)
+-rw——————   .bash_history  
+-rw-r--r--  .sudo_as_admin_successful  
 drwxr-xr-x  Pictures/
 ```
 
