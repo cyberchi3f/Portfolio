@@ -320,20 +320,16 @@ Result: Connection closed — reboot confirmed. This validates that `broken` can
 
 ### Step 9.2 — Attempt Direct Script Execution (Blocked)
 
-```bash
-sudo sh /etc/init.d/password-policy.sh
-# Sorry, user broken is not allowed to execute '/bin/sh /etc/init.d/password-policy.sh' as root on ubuntu.
-```
+<img width="1363" height="87" alt="image" src="https://github.com/user-attachments/assets/023e9d68-856f-466d-83b0-b2628e5a858d" />
 
 Direct execution is blocked by sudoers policy — the init.d mechanism is the intended trigger.
 
 ### Step 9.3 — Set Date to Thursday and Reboot
 
-```bash
-# 2019-08-08 was a Thursday (day 4)
-timedatectl set-time '2019-08-08 13:45'
-sudo reboot
-```
+2026-05-14 was a Thursday (day 4)
+
+<img width="851" height="114" alt="image" src="https://github.com/user-attachments/assets/1ba3efac-2ca4-4793-93e7-a9d5e1dafd42" />
+
 
 On reboot, the system boots into Thursday. The `/etc/init.d/password-policy.sh` script executes as root, evaluates `DAYOFWEEK = 4`, and runs:
 
@@ -354,6 +350,7 @@ su - root
 
 root@ubuntu:~#
 ```
+<img width="986" height="581" alt="image" src="https://github.com/user-attachments/assets/371fe41c-0566-453d-85a0-906ac666caf7" />
 
 > 🚩 **Root achieved!** Full system compromise complete.
 
