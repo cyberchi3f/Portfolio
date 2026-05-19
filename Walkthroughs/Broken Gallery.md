@@ -159,9 +159,11 @@ The output returns raw JPEG metadata and binary artifact strings — no clear em
 
 <img width="497" height="189" alt="2026-05-19 20_04_25-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/8cad1109-11a3-4fe5-8c1b-1b311bc79d7b" />
 
-<img width="666" height="159" alt="2026-05-19 20_21_28-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/c5b57203-7fbb-48ba-a002-9bcb4a4b4d25" />
+```
+ls |grep .jpg | sed s/\.jpg// > wordlists2
+```
 
-This command lists all files in the current directory, filters for files ending in `.jpg`, removes the `.jpg` extension from each filename, and saves the resulting names to a file called `wordlists`. These filenames can then be used as potential passwords or keywords for further analysis.
+This command lists all files in the current directory, filters for files ending in `.jpg`, removes the `.jpg` extension from each filename, and saves the resulting names to a file called `wordlists2`. These filenames can then be used as potential passwords or keywords for further analysis.
 
 ### Step 4.4 — Steghide Extraction Attempts
 
