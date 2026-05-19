@@ -1,8 +1,6 @@
 # 🖼️ Broken: Gallery — VulnHub Walkthrough
 
 > **Platform:** VulnHub | **URL:** https://www.vulnhub.com/entry/broken-gallery,344/  
-> **Difficulty:** Beginner–Intermediate | **Author of writeup:** [@cyberchi3f](https://github.com/cyberchi3f)  
-> **Tagline:** *Break it ethically. Fix it permanently.*
 
 ---
 
@@ -86,16 +84,13 @@ Root Access (TodayIsAgoodDay)
 With the VM booted and running on the same NAT subnet, the first step is identifying the target IP using passive ARP scanning.
 
 ```bash
-netdiscover -r 172.27.0.0/16
+sudo netdiscover -i eth0
 ```
 
 **Output:**
 
-```
-IP              At MAC Address     Count   Len    MAC Vendor / Hostname
-172.29.209.95   00:0c:29:61:a4:25    2     120    VMware, Inc.
-172.29.209.47   fa:3d:79:95:28:87    8     480    Unknown vendor
-```
+<img width="972" height="217" alt="2026-05-19 19_55_01-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/39eb3c68-42e5-4e30-813e-4522543c3351" />
+
 
 > **Note:** `172.29.209.95` is identified as a VMware guest — confirmed as our target. `172.29.209.47` is our Kali attack machine.
 
@@ -111,11 +106,8 @@ nmap -A 172.29.209.95
 
 **Key findings:**
 
-```
-PORT     STATE  SERVICE  VERSION
-22/tcp   open   ssh      OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
-80/tcp   open   http     Apache httpd 2.4.18
-```
+<img width="1080" height="807" alt="2026-05-19 19_56_20-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/330203fd-7861-4372-a319-e1e6e65f4c07" />
+
 
 **HTTP directory listing exposed by Nmap:**
 
@@ -129,7 +121,6 @@ img_mountains.jpg (8.4K)
 ```
 
 **OS Fingerprint:** Linux 3.2–4.14 (Ubuntu 16.04 confirmed post-login)  
-**MAC Address:** `00:0C:29:61:A4:25` (VMware)
 
 > ⚠️ **Finding:** Apache is running with directory listing enabled (`-Indexes` not set), exposing all web root files. This is a misconfiguration that aids enumeration significantly.
 
@@ -141,9 +132,7 @@ Navigating to `http://172.29.209.95` in the browser confirms the Apache director
 
 **Visible files:**
 
-- `README.md` — 55K (could contain hints)
-- `gallery.html` — 1.1K (the image gallery page)
-- `img_5terre.jpg`, `img_forest.jpg`, `img_lights.jpg`, `img_mountains.jpg`
+<img width="902" height="485" alt="2026-05-19 19_52_39-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/214058c3-334a-4567-b7cd-fa2736bade27" />
 
 All files are dated **2019-08-09**, providing a timestamp context that later becomes relevant during privilege escalation.
 
@@ -155,45 +144,25 @@ The presence of multiple image files on a vulnerable machine is a classic indica
 
 ### Step 4.1 — Download Images
 
-```bash
-cd ~/Pictures
-wget http://172.29.209.95/img_5terre.jpg
-wget http://172.29.209.95/img_forest.jpg
-wget http://172.29.209.95/img_lights.jpg
-wget http://172.29.209.95/img_mountains.jpg
-ls
-```
+<img width="797" height="108" alt="image" src="https://github.com/user-attachments/assets/f539836d-7c3b-42c3-90c7-0e0936047465" />
 
 ### Step 4.2 — Extract Printable Strings
 
-```bash
-strings *.jpg | less
-```
+<img width="557" height="117" alt="image" src="https://github.com/user-attachments/assets/04303cb1-3924-4094-85c4-921bf932c17e" />
 
 The output returns raw JPEG metadata and binary artifact strings — no clear embedded flags or credentials visible in plaintext.
 
+<img width="734" height="1039" alt="2026-05-19 20_01_04-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/5888be69-8ea5-4ec8-acb9-10c09b037e1f" />
+
+
 ### Step 4.3 — Strip Filenames for Reference
 
-```bash
-ls | grep .jpg | sed s/\.jpg//
-```
+<img width="497" height="189" alt="2026-05-19 20_04_25-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/8cad1109-11a3-4fe5-8c1b-1b311bc79d7b" />
 
-**Output:**
-```
-img_5terre
-img_forest
-img_lights
-img_mountains
-```
 
 ### Step 4.4 — Steghide Extraction Attempts
 
-```bash
-steghide extract -sf img_5terre.jpg
-steghide extract -sf img_forest.jpg
-steghide extract -sf img_lights.jpg
-steghide extract -sf img_mountains.jpg
-```
+<img width="901" height="517" alt="2026-05-19 20_14_05-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/8f7f6fb1-b496-455f-91ce-2289a375c139" />
 
 **Result:** All four return: `steghide: could not extract any data with that passphrase!`
 
@@ -208,6 +177,9 @@ Rather than using generic wordlists like `rockyou.txt`, the attack surface itsel
 ### Step 5.1 — Build Initial Wordlist from Context
 
 The filenames and page names from the web server provide natural candidates:
+
+<img width="666" height="159" alt="2026-05-19 20_21_28-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/1361d436-39d6-43e2-a926-3a445f8641c3" />
+
 
 ```bash
 # Create initial wordlist from known names
@@ -248,14 +220,7 @@ mountains
 rsmangler -m 6 -x 8 -r -d -e -i --punctuation -y -a -C --pna --nb --space --allow-duplicate -f wordlist3 -o mangled
 ```
 
-**Output:**
-```
-5 words in a start list creates a dictionary of nearly 100,000 words.
-You have 6 words in your list, are you sure you wish to continue?
-Hit ctrl-c to abort
-
-5 4 3 2 1
-```
+<img width="1581" height="202" alt="2026-05-19 20_51_03-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/de56fcff-4d1d-41f3-8930-206c46c0ac04" />
 
 This generates the `mangled` file — a large mutated password dictionary built from context-aware seed words.
 
@@ -265,18 +230,14 @@ This generates the `mangled` file — a large mutated password dictionary built 
 
 ### Attempt 1 — Using Original Wordlist (Failed)
 
-```bash
-hydra -L wordlists -P wordlists 172.29.209.95 ssh
-```
+<img width="1896" height="298" alt="2026-05-19 20_17_04-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/5d161d1b-f879-4713-bb1a-d031271f490c" />
 
 **Result:** `1 of 1 target completed, 0 valid password found`  
 16 login attempts across 4 usernames × 4 passwords — no hits.
 
 ### Attempt 2 — Using Crafted Wordlist3 (Success ✅)
 
-```bash
-hydra -L wordlist3 -P wordlist3 172.29.209.95 ssh
-```
+<img width="1907" height="321" alt="2026-05-19 20_52_15-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/17bb3e68-847b-4344-bccf-5f075bd90f4f" />
 
 **Output:**
 ```
@@ -292,23 +253,9 @@ hydra -L wordlist3 -P wordlist3 172.29.209.95 ssh
 
 ## Phase 7 — Initial Access
 
-```bash
-ssh broken@172.29.209.95
-```
+<img width="1159" height="598" alt="2026-05-19 20_56_47-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/43c8a273-c6c1-42d6-8a8c-97467a7e161e" />
 
 SSH prompts for host key verification (first connection) — accepted. Password entered: `broken`
-
-**Banner:**
-```
-Welcome to Ubuntu 16.04 LTS (GNU/Linux 4.4.0-21-generic x86_64)
-
-762 packages can be updated.
-458 updates are security updates.
-
-New release '18.04.6 LTS' available.
-
-broken@ubuntu:~$
-```
 
 > ⚠️ **Observation:** 762 pending package updates including 458 security patches indicates a severely outdated and unpatched system — a significant attack surface in a real-world scenario.
 
@@ -318,9 +265,7 @@ broken@ubuntu:~$
 
 ### Step 8.1 — Directory Listing
 
-```bash
-ls -lah
-```
+<img width="1202" height="877" alt="2026-05-19 21_02_11-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/c2ef3a49-4193-41d5-98e0-a43af5a31263" />
 
 Notable files in `/home/broken`:
 
@@ -334,9 +279,7 @@ drwxr-xr-x  Pictures/
 
 ### Step 8.2 — Bash History Review
 
-```bash
-history
-```
+<img width="997" height="1020" alt="2026-05-19 20_57_46-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/e69ca957-5e92-4a59-9d8c-3b434d47c2e5" />
 
 Partial history (lines 167–205) reveals prior root-level activity:
 
@@ -359,32 +302,14 @@ Partial history (lines 167–205) reveals prior root-level activity:
 
 ### Step 8.3 — Locate and Inspect the Password Policy Script
 
-```bash
-locate password-policy.sh
-# Output: /etc/init.d/password-policy.sh
+<img width="853" height="600" alt="2026-05-19 21_03_43-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/6bc5427b-42f3-4e8a-851a-9ca1e43e27f0" />
 
-cat /etc/init.d/password-policy.sh
-```
-
-**Script contents:**
-
-```bash
-#!/bin/bash
-
-DAYOFWEEK=$(date +"%u")
-echo DAYOFWEEK: $DAYOFWEEK
-
-if [ "$DAYOFWEEK" -eq 4 ]
-then
-        sudo sh -c 'echo root:TodayIsAgoodDay | chpasswd'
-fi
-
-#if [ "$DAYOFWEEK" = 4 ]
-```
 
 > 🔑 **Vulnerability identified:** This init script runs as root at boot time (via `/etc/init.d/`). If the system day is **Thursday (day 4)**, it sets the root password to `TodayIsAgoodDay`.
 
 ### Step 8.4 — Verify Current Day
+
+<img width="1424" height="252" alt="2026-05-19 21_06_09-KALI - VMware Workstation" src="https://github.com/user-attachments/assets/d7ba3278-f953-4b61-99b1-defb4e0bf282" />
 
 ```bash
 date +"%u"
@@ -409,9 +334,7 @@ Since `password-policy.sh` is in `/etc/init.d/`, it executes on system boot **as
 
 ### Step 9.1 — Confirm sudo Reboot Privilege
 
-```bash
-sudo reboot
-```
+<img width="1048" height="391" alt="image" src="https://github.com/user-attachments/assets/f27f83ee-ee2d-49a1-b0ed-0803f2077db4" />
 
 Result: Connection closed — reboot confirmed. This validates that `broken` can reboot the machine via sudo.
 
@@ -469,12 +392,3 @@ root@ubuntu:~#
 | 7 | OpenSSH 7.2p2 — EOL version | High | Upgrade to a supported OpenSSH release |
 
 ---
-
-## 📸 Screenshots
-
-All screenshots are timestamped from the live engagement session on **2026-05-19** and cover each phase of the attack chain end-to-end.
-
----
-
-*Walkthrough by [@cyberchi3f](https://github.com/cyberchi3f) — Break it ethically. Fix it permanently.*  
-*DexAShield Technologies | Lagos, Nigeria*
