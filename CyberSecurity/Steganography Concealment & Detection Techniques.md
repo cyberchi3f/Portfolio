@@ -249,8 +249,6 @@ After successful embedding, the original payload files are removed to reduce for
 
 <img width="361" height="114" alt="Deleted embedded files" src="https://github.com/user-attachments/assets/f0dfb315-5681-4526-a02d-4905b93f3ed9" />
 
-[![steghide info output for audio.wav confirming embedded hello.sh](./assets/Audo_Steghide_info.png)](./assets/Audo_Steghide_info.png)
-
 > **Figure 15:** Embedding confirmed in WAV — `hello.sh`, 31B, Rijndael-128 CBC, compressed
 
 **Step 2 — Verify embedded data in JPEG carrier:**
