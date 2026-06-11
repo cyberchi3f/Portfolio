@@ -63,8 +63,6 @@ Before any operations begin, the working directory is listed to confirm all carr
 
 <img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/98ccebf5-5c7f-4288-9992-166bb55c5b4a" />
 
-> **Figure 1:** Initial lab file structure — carrier files and payloads present before operations begin
-
 > **Figure 2:** Lab directory contents confirmed — carriers and payloads ready
 
 ---
