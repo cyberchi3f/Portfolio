@@ -35,7 +35,7 @@
 
 | Parameter | Value |
 |---|---|
-| **Operating System** | Kali Linux (VMware Workstation) |
+| **Operating System** | Kali Linux |
 | **Primary Tool** | `steghide` |
 | **Analysis Tools** | `exiftool`, `stat`, `file`, `sha256sum` |
 | **Carrier Formats** | JPEG (`.jpg`), WAV PCM Audio (`.wav`) |
