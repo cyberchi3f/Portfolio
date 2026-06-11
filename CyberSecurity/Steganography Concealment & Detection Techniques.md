@@ -142,7 +142,7 @@ The `stat` command provides filesystem-level metadata including access, modifica
 
 `steghide extract` decrypts and recovers the embedded payload from the carrier. The `-sf` flag specifies the stego-file. After providing the correct passphrase, the original `hello.sh` is reconstructed in the working directory.
 
-<img width="644" height="168" alt="stats analysis" src="https://github.com/user-attachments/assets/c202d4d9-5db0-419d-84b4-83c2168a970f" />
+<img width="356" height="60" alt="extracted txt file" src="https://github.com/user-attachments/assets/d978c5c0-8005-44ab-92d1-555bb3093563" />
 
 > **Figure 10:** Shell script successfully extracted from WAV carrier
 
