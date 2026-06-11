@@ -1,6 +1,6 @@
 # 🕵️ Steganography — Concealment & Detection Techniques
 
-> **Lab Objective:** Demonstrate the full steganography lifecycle using `steghide` on Kali Linux — including data concealment inside audio and image carrier files, metadata forensics, cryptographic integrity verification, payload extraction and execution, and attacker OPSEC cleanup simulation.
+> **Lab Objective:** Demonstrate the full steganography lifecycle using `steghide` on Kali Linux, including data concealment inside audio and image carrier files, metadata forensics, cryptographic integrity verification, payload extraction and execution, and attacker OPSEC cleanup simulation.
 
 ---
 
@@ -40,8 +40,7 @@
 | **Analysis Tools** | `exiftool`, `stat`, `file`, `sha256sum` |
 | **Carrier Formats** | JPEG (`.jpg`), WAV PCM Audio (`.wav`) |
 | **Encryption Ciphers** | Rijndael-128/CBC (default), Blowfish/CBC (`-e blowfish`) |
-| **Working Directory** | `~/LAB - steghide` |
-| **Reference** | LAB-STEG-2026-001 |
+
 
 ---
 
@@ -56,22 +55,16 @@ When combined, the two techniques produce a layered covert communication channel
 
 `steghide` is an open-source steganography utility that supports JPEG, BMP, WAV, and AU carriers. It encrypts the payload before embedding, meaning that even if an investigator detects the presence of hidden data, they cannot extract it without the correct passphrase.
 
-[![Lab file listing showing audio.wav, cover.jpg, cover2.jpg, hello.sh, secret.txt](./assets/Lab_Files.png)](./assets/Lab_Files.png)
+<img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/1fd1e289-941b-4ad6-8c5a-987ec6ced16d" />
 
 > **Figure 1:** Initial lab file structure — carrier files and payloads present before operations begin
 
----
 
 ## ⚙️ Lab Walkthrough
 
 ### 1. Working Directory Survey
 
 Before any operations begin, the working directory is listed to confirm all carrier files and payloads are present.
-
-```
-$ ls
-audio.wav  cover2.jpg  cover.jpg  hello.sh  secret.txt
-```
 
 [![Directory listing confirming all lab files are present](./assets/Lab_Files.png)](./assets/Lab_Files.png)
 
@@ -83,16 +76,7 @@ audio.wav  cover2.jpg  cover.jpg  hello.sh  secret.txt
 
 The `file` command reads the **magic bytes** of each carrier to confirm its true format. This is a critical forensic baseline before any embedding is performed.
 
-```
-$ file cover.jpg
-cover.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1×1,
-           segment length 16, progressive, precision 8, 959×1480, components 3
-
-$ file audio.wav
-audio.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 44100 Hz
-```
-
-[![file command output confirming JPEG and WAV carrier formats](./assets/File_Properties.png)](./assets/File_Properties.png)
+<img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/98ccebf5-5c7f-4288-9992-166bb55c5b4a" />
 
 > **Figure 3:** Both carrier files confirmed valid — JPEG 959×1480 and WAV PCM 44100 Hz
 
@@ -102,207 +86,97 @@ audio.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 
 
 The `steghide embed` command hides `hello.sh` inside `audio.wav` using **Rijndael-128 CBC** encryption (the default cipher) with zlib compression. The `-cf` flag specifies the cover file; the `-ef` flag specifies the file to embed.
 
-```
-$ steghide embed -cf audio.wav -ef hello.sh
-Enter passphrase:
-Re-Enter passphrase:
-embedding "hello.sh" in "audio.wav"... done
-```
-
-[![Terminal showing successful embedding of hello.sh into audio.wav](./assets/Audo_Steghide_info.png)](./assets/Audo_Steghide_info.png)
+<img width="360" height="79" alt="extract steghide script" src="https://github.com/user-attachments/assets/298b917b-936d-49a0-9032-b556caa52469" />
 
 > **Figure 4:** Shell script successfully embedded in WAV audio carrier
-
----
 
 ### 4. Verify Audio Embedding
 
 `steghide info` confirms whether embedded data exists in the carrier. When the correct passphrase is supplied, it reveals the embedded filename, payload size, encryption algorithm, and compression status.
 
-```
-$ steghide info audio.wav
-"audio.wav":
-  format: wave audio, PCM encoding
-  capacity: 646.0 KB
-Try to get information about embedded data ? (y/n) y
-Enter passphrase:
-  embedded file "hello.sh":
-    size: 31.0 Byte
-    encrypted: rijndael-128, cbc
-    compressed: yes
-```
-
-[![steghide info output confirming hello.sh embedded with Rijndael-128 CBC](./assets/Audo_Steghide_info.png)](./assets/Audo_Steghide_info.png)
+<img width="360" height="79" alt="extract steghide script" src="https://github.com/user-attachments/assets/19566663-77a5-47b0-9cab-357b9ef326e7" />
 
 > **Figure 5:** Embedding verified — 31-byte payload, Rijndael-128 CBC, compressed
 
 > 📝 **Note:** The WAV file is modified in-place at the binary level but remains perceptually identical to any media player. The 646 KB carrier capacity far exceeds the 31-byte payload.
 
----
+
 
 ### 5. Embed Text File in JPEG Image (Blowfish)
 
 The `-e blowfish` flag explicitly selects **Blowfish CBC** as the encryption cipher, overriding the Rijndael default. This demonstrates that `steghide` supports configurable cipher selection per embedding operation.
 
-```
-$ steghide embed -cf cover.jpg -ef secret.txt -e blowfish
-Enter passphrase:
-Re-Enter passphrase:
-embedding "secret.txt" in "cover.jpg"... done
-```
-
-[![Terminal showing successful embedding of secret.txt into cover.jpg with Blowfish](./assets/Embed_text_in_image.png)](./assets/Embed_text_in_image.png)
+<img width="360" height="79" alt="extract steghide script" src="https://github.com/user-attachments/assets/92eb02e2-ea2a-4d34-9f42-024cf5012516" />
 
 > **Figure 6:** Text file successfully embedded in JPEG carrier using Blowfish encryption
 
----
 
 ### 6. Verify Image Embedding
 
 Running `steghide info` on the modified JPEG confirms the Blowfish cipher is active and reveals the embedded payload details.
 
-```
-$ steghide info cover.jpg
-"cover.jpg":
-  format: jpeg
-  capacity: 10.8 KB
-Try to get information about embedded data ? (y/n) y
-Enter passphrase:
-  embedded file "secret.txt":
-    size: 19.0 Byte
-    encrypted: blowfish, cbc
-    compressed: yes
-```
-
-[![steghide info output confirming secret.txt embedded with Blowfish CBC](./assets/Image_steghide_info.png)](./assets/Image_steghide_info.png)
+<img width="360" height="79" alt="extract steghide script" src="https://github.com/user-attachments/assets/071e7401-2ddb-4cbe-aa2b-2ffc6d53dba6" />
 
 > **Figure 7:** Embedding verified — 19-byte payload, Blowfish CBC, compressed
 
 > ⚠️ **Note:** JPEG carriers have significantly lower embedding capacity (10.8 KB) compared to WAV files (646 KB). Sufficient for short text payloads but not for executables or larger files.
 
----
 
 ### 7. Metadata Forensics — ExifTool Analysis
 
 `exiftool` is used to inspect all EXIF and file header metadata of the stego-modified carrier. This is a standard first-pass forensic check when investigating suspicious media files.
 
-```
-$ exiftool cover.jpg
-ExifTool Version Number  : 13.44
-File Name                : cover.jpg
-File Size                : 186 kB
-File Modification Date   : 2026:06:10 23:39:02-05:00
-File Permissions         : -rw-rw-r--
-File Type                : JPEG
-MIME Type                : image/jpeg
-JFIF Version             : 1.01
-Image Width              : 959
-Image Height             : 1480
-Encoding Process         : Baseline DCT, Huffman coding
-Bits Per Sample          : 8
-Color Components         : 3
-Y Cb Cr Sub Sampling     : YCbCr4:2:0 (2 2)
-Megapixels               : 1.4
-```
-
-[![exiftool output showing no EXIF anomalies in the stego-modified JPEG](./assets/exiftool_analyse_image.png)](./assets/exiftool_analyse_image.png)
-
 > **Figure 8:** ExifTool reveals no EXIF anomalies — embedding is invisible to header-level analysis
 
 > 🔎 **Forensic Finding:** `steghide` modifies **pixel-level LSBs** in the image data section, not the EXIF header. An analyst relying solely on `exiftool` would find nothing suspicious. Dedicated steganalysis tools (e.g., `zsteg`, `StegExpose`) or statistical analysis would be required.
 
----
+<img width="360" height="79" alt="extract steghide script" src="https://github.com/user-attachments/assets/a1c70f38-7b11-44fe-89e5-a3d2ee8f6bb4" />
+
 
 ### 8. Filesystem Timestamps — stat Command
 
 The `stat` command provides filesystem-level metadata including access, modification, inode change, and birth times — all relevant for forensic timeline reconstruction.
 
-```
-$ stat cover.jpg
-  File: cover.jpg
-  Size: 186169    Blocks: 368    IO Block: 4096   regular file
-Device: 8,1       Inode: 1116675   Links: 1
-Access: (0664/-rw-rw-r--)  Uid: (1000/cyberchief)  Gid: (1000/cyberchief)
-Access: 2026-06-10 23:39:03.105230530 -0500
-Modify: 2026-06-10 23:39:02.977228278 -0500
-Change: 2026-06-10 23:39:02.977228278 -0500
-Birth:  2026-06-10 23:19:09.911932342 -0500
-```
-
-[![stat output showing timestamp metadata for cover.jpg](./assets/stats_analysis.png)](./assets/stats_analysis.png)
+<img width="644" height="168" alt="stats analysis" src="https://github.com/user-attachments/assets/bdeeeb32-026b-47c1-82c4-de90ce2cedb6" />
 
 > **Figure 9:** Filesystem timestamps showing ~20-minute delta between Birth and Modify times
 
 > ⚠️ **Forensic Finding:** The **~20-minute delta** between `Birth` (23:19) and `Modify` (23:39) timestamps is consistent with the embedding operation occurring post-creation. In a real investigation, this discrepancy is an investigative lead — though it can be forged with `touch` and requires corroboration.
 
----
-
 ### 9. Extract Shell Script from WAV
 
 `steghide extract` decrypts and recovers the embedded payload from the carrier. The `-sf` flag specifies the stego-file. After providing the correct passphrase, the original `hello.sh` is reconstructed in the working directory.
 
-```
-$ steghide extract -sf audio.wav
-Enter passphrase:
-wrote extracted data to "hello.sh".
-```
-
-[![steghide extract output confirming hello.sh recovered from audio.wav](./assets/extract_steghide_script.png)](./assets/extract_steghide_script.png)
+<img width="644" height="168" alt="stats analysis" src="https://github.com/user-attachments/assets/c202d4d9-5db0-419d-84b4-83c2168a970f" />
 
 > **Figure 10:** Shell script successfully extracted from WAV carrier
-
----
 
 ### 10. Execute the Extracted Payload
 
 The recovered shell script must be made executable with `chmod +x` before it can be run. Executing it confirms the embedded payload is fully functional.
 
-```
-$ chmod +x ./hello.sh
-$ ./hello.sh
-Hello World
-```
-
-[![Terminal showing hello.sh executed successfully, outputting Hello World](./assets/extracted_script.png)](./assets/extracted_script.png)
+<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/6b934150-4336-4921-8275-5b69920f3b4f" />
 
 > **Figure 11:** Extracted shell script executed — output: `Hello World`
 
 > 🔴 **Attack Implication:** This step demonstrates a real-world attack scenario: a threat actor could embed a **malicious shell script** inside an innocuous WAV audio file, distribute it via email or messaging, and have the recipient unknowingly extract and execute it — bypassing AV tools and content inspection systems that only analyse file headers or extensions.
 
----
 
 ### 11. Extract Text File from JPEG
 
 Using the same extraction command against the JPEG carrier recovers the `secret.txt` payload. The `cat` command confirms the content is intact.
 
-```
-$ steghide extract -sf cover.jpg
-Enter passphrase:
-wrote extracted data to "secret.txt".
-
-$ cat secret.txt
-Confidential Notes
-```
-
-[![Terminal showing secret.txt extracted from cover.jpg and its contents displayed](./assets/extracted_txt_file.png)](./assets/extracted_txt_file.png)
+<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/97d36153-f366-42bb-9cbe-30fdc9dfc91f" />
 
 > **Figure 12:** Text file extracted from JPEG carrier — content: `Confidential Notes`
 
----
+<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/c2bc8326-51f9-498a-8185-338c35c3f10a" />
 
 ### 12. SHA-256 Integrity Verification
 
 SHA-256 hashing provides definitive proof of file modification. The stego-modified `cover.jpg` is compared against an unmodified baseline `main-cover.jpg` to demonstrate that embedding always alters the binary hash — even when the visual output appears identical.
 
-```
-$ sha256sum cover.jpg
-e82d7128949c23e6d9b6b8aa76eb041fa3d70712d18112d790b90cd51ec18dfb  cover.jpg
-
-$ sha256sum main-cover.jpg
-3b5f33e27df8605e801c4d000de9936b83a06cc0b9bd629de87244ad050b1af0  main-cover.jpg
-```
-
-[![sha256sum output showing different hashes for stego and clean versions of cover.jpg](./assets/sha256.png)](./assets/sha256.png)
+<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/c2ce1cf5-5fc4-47a9-a0c0-def48d6cdcd9" />
 
 > **Figure 13:** Hash mismatch proves file modification — visually identical but binary-different
 
@@ -312,14 +186,7 @@ $ sha256sum main-cover.jpg
 
 After successful embedding, the original payload files are removed to reduce forensic traces — simulating the operational security (OPSEC) cleanup step an attacker would perform.
 
-```
-$ rm hello.sh secret.txt
-
-$ ls
-audio.wav  cover2.jpg  cover.jpg
-```
-
-[![Directory listing after cleanup showing only media carrier files remain](./assets/Deleted_embedded_files.png)](./assets/Deleted_embedded_files.png)
+<img width="361" height="114" alt="Deleted embedded files" src="https://github.com/user-attachments/assets/a6f4a401-5435-4398-b544-fe6de2bc3561" />
 
 > **Figure 14:** Payload originals removed — only media carrier files remain in the directory
 
@@ -385,9 +252,7 @@ audio.wav  cover2.jpg  cover.jpg
 
 **Step 1 — Verify embedded data in WAV carrier:**
 
-```
-$ steghide info audio.wav
-```
+<img width="361" height="114" alt="Deleted embedded files" src="https://github.com/user-attachments/assets/f0dfb315-5681-4526-a02d-4905b93f3ed9" />
 
 [![steghide info output for audio.wav confirming embedded hello.sh](./assets/Audo_Steghide_info.png)](./assets/Audo_Steghide_info.png)
 
@@ -395,22 +260,13 @@ $ steghide info audio.wav
 
 **Step 2 — Verify embedded data in JPEG carrier:**
 
-```
-$ steghide info cover.jpg
-```
-
-[![steghide info output for cover.jpg confirming embedded secret.txt](./assets/Image_steghide_info.png)](./assets/Image_steghide_info.png)
+<img width="361" height="114" alt="Deleted embedded files" src="https://github.com/user-attachments/assets/64f7f4a4-98fa-4a1c-b83a-7a2c449fe3b4" />
 
 > **Figure 16:** Embedding confirmed in JPEG — `secret.txt`, 19B, Blowfish CBC, compressed
 
 **Step 3 — Confirm hash mismatch between stego and clean carrier:**
 
-```
-$ sha256sum cover.jpg
-$ sha256sum main-cover.jpg
-```
-
-[![sha256sum comparison output](./assets/sha256.png)](./assets/sha256.png)
+<img width="361" height="114" alt="Deleted embedded files" src="https://github.com/user-attachments/assets/6a651346-4432-4871-8e45-5ea6bd681d5f" />
 
 > **Figure 17:** SHA-256 hashes differ — file modification conclusively proven
 
