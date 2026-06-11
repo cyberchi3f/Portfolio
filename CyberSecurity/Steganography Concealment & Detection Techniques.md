@@ -55,18 +55,15 @@ When combined, the two techniques produce a layered covert communication channel
 
 `steghide` is an open-source steganography utility that supports JPEG, BMP, WAV, and AU carriers. It encrypts the payload before embedding, meaning that even if an investigator detects the presence of hidden data, they cannot extract it without the correct passphrase.
 
-<img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/1fd1e289-941b-4ad6-8c5a-987ec6ced16d" />
-
-> **Figure 1:** Initial lab file structure — carrier files and payloads present before operations begin
-
-
 ## ⚙️ Lab Walkthrough
 
 ### 1. Working Directory Survey
 
 Before any operations begin, the working directory is listed to confirm all carrier files and payloads are present.
 
-[![Directory listing confirming all lab files are present](./assets/Lab_Files.png)](./assets/Lab_Files.png)
+<img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/98ccebf5-5c7f-4288-9992-166bb55c5b4a" />
+
+> **Figure 1:** Initial lab file structure — carrier files and payloads present before operations begin
 
 > **Figure 2:** Lab directory contents confirmed — carriers and payloads ready
 
@@ -76,7 +73,7 @@ Before any operations begin, the working directory is listed to confirm all carr
 
 The `file` command reads the **magic bytes** of each carrier to confirm its true format. This is a critical forensic baseline before any embedding is performed.
 
-<img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/98ccebf5-5c7f-4288-9992-166bb55c5b4a" />
+<img width="361" height="114" alt="Deleted embedded files" src="https://github.com/user-attachments/assets/8721d2cb-5061-498f-9aec-df4b22b3f077" />
 
 > **Figure 3:** Both carrier files confirmed valid — JPEG 959×1480 and WAV PCM 44100 Hz
 
