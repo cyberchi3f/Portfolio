@@ -161,17 +161,19 @@ The recovered shell script must be made executable with `chmod +x` before it can
 
 Using the same extraction command against the JPEG carrier recovers the `secret.txt` payload. The `cat` command confirms the content is intact.
 
-<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/97d36153-f366-42bb-9cbe-30fdc9dfc91f" />
+<img width="346" height="80" alt="extract steghide txt file" src="https://github.com/user-attachments/assets/eac62d1d-11df-447b-96aa-76b3ef91c3d0" />
+
 
 > **Figure 12:** Text file extracted from JPEG carrier — content: `Confidential Notes`
 
-<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/c2bc8326-51f9-498a-8185-338c35c3f10a" />
+<img width="356" height="60" alt="extracted txt file" src="https://github.com/user-attachments/assets/01053f26-645d-4af2-9639-b46b2f212605" />
+
 
 ### 12. SHA-256 Integrity Verification
 
 SHA-256 hashing provides definitive proof of file modification. The stego-modified `cover.jpg` is compared against an unmodified baseline `main-cover.jpg` to demonstrate that embedding always alters the binary hash — even when the visual output appears identical.
 
-<img width="359" height="112" alt="extracted script" src="https://github.com/user-attachments/assets/c2ce1cf5-5fc4-47a9-a0c0-def48d6cdcd9" />
+<img width="356" height="60" alt="extracted txt file" src="https://github.com/user-attachments/assets/a65970e2-67c4-4dd2-b156-6387adb596be" />
 
 > **Figure 13:** Hash mismatch proves file modification — visually identical but binary-different
 
