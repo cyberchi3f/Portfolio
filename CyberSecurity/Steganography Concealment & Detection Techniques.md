@@ -34,16 +34,6 @@ This lab is a **hands-on walkthrough of steganography techniques** using `steghi
 
 <img width="449" height="65" alt="Lab Files" src="https://github.com/user-attachments/assets/9a339f99-570d-4702-a4aa-2b7f7d1a4dd8" />
 
-
-```
-LAB - steghide/
-├── audio.wav          # WAV carrier  — 646 KB, PCM 16-bit stereo 44100 Hz
-├── cover.jpg          # JPEG carrier — 186 KB, 959×1480, JFIF 1.01
-├── cover2.jpg         # Alternate image carrier
-├── hello.sh           # Payload A — shell script  → embedded in audio.wav
-└── secret.txt         # Payload B — text file     → embedded in cover.jpg
-```
-
 ---
 
 ## 🔬 Lab Walkthrough
