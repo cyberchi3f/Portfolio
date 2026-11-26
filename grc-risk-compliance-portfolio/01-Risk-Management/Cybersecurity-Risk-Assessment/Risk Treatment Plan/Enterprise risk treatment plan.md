@@ -16,20 +16,6 @@
 
 </div>
 
-## Working Paper Information
-
-| Field | Detail | Field | Detail |
-|---|---|---|---|
-| **Working paper** | WP-07 | **Document ID** | SOL-GRC-RA-007 |
-| **Prepared by** | Simon Etim, GRC Analyst & Assessment Lead | **Status** | Draft – Pending Review |
-| **Reviewed by** | Pending (Chinedu Okafor, CISO, Fictional) | **Classification** | Public – Simulated GRC Portfolio Project |
-| **Source document** | SOL-GRC-RA-005 | **Workbook sheet** | Treatment Plan |
-
-> [!IMPORTANT]
-> All treatment actions are **proposed**. No implementation, control validation or management acceptance is verified. See the [Portfolio Disclaimer](#portfolio-disclaimer).
-
----
-
 ## Proposed treatment register
 
 | Risk Level | Score | Actions | Distribution (15 risks) |
@@ -44,23 +30,23 @@
 
 **Status of all 15 actions:** Proposed – not started.
 
-| Risk ID | Asset | Score (L × I) | Priority | Treatment | Proposed owner |
-|---|---|:-:|:-:|---|---|
-| `RSK-001` | Microsoft 365 Environment | **16** (4 × 4) | 🟠 High | Strengthen authentication and phishing protection | Tunde Adebayo |
-| `RSK-002` | Active Directory / Entra ID | **20** (4 × 5) | 🔴 Critical | Implement privileged access safeguards | Tunde Adebayo |
-| `RSK-003` | Client Project Documentation | **12** (3 × 4) | 🟠 High | Restrict and monitor client document access | Emeka Obi |
-| `RSK-004` | Remote Monitoring & Management Platform | **20** (4 × 5) | 🔴 Critical | Secure remote management access | Emeka Obi |
-| `RSK-005` | Cloud Infrastructure | **20** (4 × 5) | 🔴 Critical | Strengthen cloud security configurations | Tunde Adebayo |
-| `RSK-006` | Corporate Network Infrastructure | **12** (3 × 4) | 🟠 High | Improve segmentation and network configuration management | Tunde Adebayo |
-| `RSK-007` | Employee Laptops & Workstations | **16** (4 × 4) | 🟠 High | Improve patching and endpoint protection | Tunde Adebayo |
-| `RSK-008` | Security Monitoring / SIEM Platform | **12** (3 × 4) | 🟠 High | Improve security logging and alert coverage | Amaka Nwosu |
-| `RSK-009` | Backup & Recovery Systems | **15** (3 × 5) | 🟠 High | Protect backups and test restoration procedures | Tunde Adebayo |
-| `RSK-010` | Employee & Payroll Records | **12** (3 × 4) | 🟠 High | Strengthen employee data access controls | Ngozi Eze |
-| `RSK-011` | Financial & Billing Records | **12** (3 × 4) | 🟠 High | Strengthen payment verification and approval controls | Ibrahim Bello |
-| `RSK-012` | Client Support Ticketing System | **12** (3 × 4) | 🟠 High | Secure support platform authentication and permissions | Emeka Obi |
-| `RSK-013` | Security Policies & Procedures | **9** (3 × 3) | 🟡 Medium | Review and update security policies | Funke Oladipo |
-| `RSK-014` | Privileged Credentials & Secrets | **20** (4 × 5) | 🔴 Critical | Implement secure privileged credential management | Amaka Nwosu |
-| `RSK-015` | Vendor Contracts & Service Agreements | **12** (3 × 4) | 🟠 High | Strengthen vendor due diligence and security oversight | Funke Oladipo |
+| Risk ID | Asset |   Score (L × I)    | Priority | Treatment | Proposed owner |
+|---|---| :-:  |:-:|---|---|
+| **RSK‑001** | Microsoft 365 Environment | **16**  (4 × 4) | 🟠 High | Strengthen authentication and phishing protection | Tunde Adebayo |
+| **RSK‑002** | Active Directory / Entra ID | **20** (4 × 5) | 🔴 Critical | Implement privileged access safeguards | Tunde Adebayo |
+| **RSK‑003** | Client Project Documentation | **12** (3 × 4) | 🟠 High | Restrict and monitor client document access | Emeka Obi |
+| **RSK‑004** | Remote Monitoring & Management Platform | **20** (4 × 5) | 🔴 Critical | Secure remote management access | Emeka Obi |
+| **RSK‑005** | Cloud Infrastructure | **20** (4 × 5) | 🔴 Critical | Strengthen cloud security configurations | Tunde Adebayo |
+| **RSK‑006** | Corporate Network Infrastructure | **12** (3 × 4) | 🟠 High | Improve segmentation and network configuration management | Tunde Adebayo |
+| **RSK‑007** | Employee Laptops & Workstations | **16** (4 × 4) | 🟠 High | Improve patching and endpoint protection | Tunde Adebayo |
+| **RSK‑008** | Security Monitoring / SIEM Platform | **12** (3 × 4) | 🟠 High | Improve security logging and alert coverage | Amaka Nwosu |
+| **RSK‑009** | Backup & Recovery Systems | **15** (3 × 5) | 🟠 High | Protect backups and test restoration procedures | Tunde Adebayo |
+| **RSK‑010** | Employee & Payroll Records | **12** (3 × 4) | 🟠 High | Strengthen employee data access controls | Ngozi Eze |
+| **RSK‑011** | Financial & Billing Records | **12** (3 × 4) | 🟠 High | Strengthen payment verification and approval controls | Ibrahim Bello |
+| **RSK‑012** | Client Support Ticketing System | **12** (3 × 4) | 🟠 High | Secure support platform authentication and permissions | Emeka Obi |
+| **RSK‑013** | Security Policies & Procedures | **9** (3 × 3) | 🟡 Medium | Review and update security policies | Funke Oladipo |
+| **RSK‑014** | Privileged Credentials & Secrets | **20** (4 × 5) | 🔴 Critical | Implement secure privileged credential management | Amaka Nwosu |
+| **RSK‑015** | Vendor Contracts & Service Agreements | **12** (3 × 4) | 🟠 High | Strengthen vendor due diligence and security oversight | Funke Oladipo |
 
 ---
 
@@ -75,12 +61,12 @@
 
 | Risk ID | Score | Treatment |
 |---|:-:|---|
-| `RSK-002` | 🔴 **20** | Implement privileged access safeguards |
-| `RSK-005` | 🔴 **20** | Strengthen cloud security configurations |
-| `RSK-001` | 🟠 **16** | Strengthen authentication and phishing protection |
-| `RSK-007` | 🟠 **16** | Improve patching and endpoint protection |
-| `RSK-009` | 🟠 **15** | Protect backups and test restoration procedures |
-| `RSK-006` | 🟠 **12** | Improve segmentation and network configuration management |
+| **RSK‑002** | 🔴 **20** | Implement privileged access safeguards |
+| **RSK‑005** | 🔴 **20** | Strengthen cloud security configurations |
+| **RSK‑001** | 🟠 **16** | Strengthen authentication and phishing protection |
+| **RSK‑007** | 🟠 **16** | Improve patching and endpoint protection |
+| **RSK‑009** | 🟠 **15** | Protect backups and test restoration procedures |
+| **RSK‑006** | 🟠 **12** | Improve segmentation and network configuration management |
 
 </details>
 
@@ -91,9 +77,9 @@
 
 | Risk ID | Score | Treatment |
 |---|:-:|---|
-| `RSK-004` | 🔴 **20** | Secure remote management access |
-| `RSK-003` | 🟠 **12** | Restrict and monitor client document access |
-| `RSK-012` | 🟠 **12** | Secure support platform authentication and permissions |
+| **RSK‑004** | 🔴 **20** | Secure remote management access |
+| **RSK‑003** | 🟠 **12** | Restrict and monitor client document access |
+| **RSK‑012** | 🟠 **12** | Secure support platform authentication and permissions |
 
 </details>
 
@@ -104,8 +90,8 @@
 
 | Risk ID | Score | Treatment |
 |---|:-:|---|
-| `RSK-014` | 🔴 **20** | Implement secure privileged credential management |
-| `RSK-008` | 🟠 **12** | Improve security logging and alert coverage |
+| **RSK‑014** | 🔴 **20** | Implement secure privileged credential management |
+| **RSK‑008** | 🟠 **12** | Improve security logging and alert coverage |
 
 </details>
 
@@ -116,8 +102,8 @@
 
 | Risk ID | Score | Treatment |
 |---|:-:|---|
-| `RSK-015` | 🟠 **12** | Strengthen vendor due diligence and security oversight |
-| `RSK-013` | 🟡 **9** | Review and update security policies |
+| **RSK‑015** | 🟠 **12** | Strengthen vendor due diligence and security oversight |
+| **RSK‑013** | 🟡 **9** | Review and update security policies |
 
 </details>
 
@@ -128,7 +114,7 @@
 
 | Risk ID | Score | Treatment |
 |---|:-:|---|
-| `RSK-010` | 🟠 **12** | Strengthen employee data access controls |
+| **RSK‑010** | 🟠 **12** | Strengthen employee data access controls |
 
 </details>
 
@@ -139,7 +125,7 @@
 
 | Risk ID | Score | Treatment |
 |---|:-:|---|
-| `RSK-011` | 🟠 **12** | Strengthen payment verification and approval controls |
+| **RSK‑011** | 🟠 **12** | Strengthen payment verification and approval controls |
 
 </details>
 
@@ -168,10 +154,7 @@ flowchart LR
 
 [Open the workbook](../Workbooks/SOL-GRC-RA-Risk-Assessment-Workbook.xlsx)
 
----
 
-## Portfolio Disclaimer
-
-
+[Back to top](#top)
 
 </div>
