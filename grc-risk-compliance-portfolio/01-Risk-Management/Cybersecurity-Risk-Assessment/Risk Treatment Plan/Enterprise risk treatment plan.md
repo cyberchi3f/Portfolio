@@ -151,5 +151,3 @@ flowchart LR
 
 > [!WARNING]
 > No implementation or acceptance is verified.
-
-[Open the workbook]grc-risk-compliance-portfolio/01-Risk-Management/Cybersecurity-Risk-Assessment/Workbooks/SOL-GRC-RA-Risk-Assessment-Workbook.ods
