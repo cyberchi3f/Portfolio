@@ -1,97 +1,42 @@
-<div align="center">
+# Simon Etim
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=180&section=header&text=Simon%20Etim&fontSize=42&fontColor=00ff88&fontAlignY=40&desc=Cybersecurity%20Professional%20%7C%20VAPT%20Specialist&descAlignY=62&descColor=aaaaaa" width="100%" />
+**Governance, Risk & Compliance (GRC) | IT Risk & Controls**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-simonetim-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonetim)
-[![Portfolio](https://img.shields.io/badge/Portfolio-cyberchi3f-00ff88?style=for-the-badge&logo=github&logoColor=black)](https://github.com/cyberchi3f/Portfolio)
-[![X](https://img.shields.io/badge/X-_cyb3rchi3f-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/_cyb3rchi3f)
-[![Medium](https://img.shields.io/badge/Medium-@simon__Jr-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@simon_Jr)
-[![Email](https://img.shields.io/badge/Email-iam.simon.etim@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iam.simon.etim@gmail.com)
+I assess technology risks, validate security controls, and turn technical findings into clear remediation priorities. My background in cybersecurity and IT support helps me explain where a control falls short, what it could mean for business operations, and what teams should address first.
 
-![Profile Views](https://komarev.com/ghpvc/?username=cyberchi3f&color=00ff88&style=flat-square&label=PROFILE+VIEWS)
+[LinkedIn](https://www.linkedin.com/in/simonetim) · [Email](mailto:iam.simon.etim@gmail.com) · [Medium](https://medium.com/@simon_Jr)
 
-</div>
+## Featured Case Study
 
----
+### Solari Technologies Ltd. — Enterprise IT Risk Assessment
 
-## `$ cat about.txt`
+This case study follows a simulated risk assessment for a 150-person IT consulting company in Lagos, Nigeria. It examines risks involving privileged access, remote monitoring and management, and access to client project documentation.
 
-```
-Proactive cybersecurity professional with hands-on experience in vulnerability
-assessment & penetration testing (VAPT), threat and risk management, firewall
-analysis, and security incident triage. I help organizations identify weaknesses
-before adversaries do — and I document every finding with precision.
+**All assessment findings, risk ratings, and proposed treatments are simulated.**
 
-  
-  🎯 Specialization  : VAPT · Threat & Vulnerability Management · GRC
-  📐 Frameworks      : MITRE ATT&CK · NIST CSF · OWASP · CVSS
-```
+| Deliverable | What it demonstrates |
+| --- | --- |
+| IT Risk Assessment Workbook | Defines the scope, identifies key assets, and scores risks by likelihood and business impact. |
+| Cybersecurity Risk Register | Records risk statements, explains ratings, and identifies proposed risk owners. |
+| Risk Heat Map and Analysis | Shows where risks are concentrated and which exposures warrant attention first. |
+| Enterprise Risk Treatment Plan | Turns priority risks into remediation actions with proposed owners and target dates. |
 
----
+## Relevant Experience
 
-### Highlights
+- **Security control validation** — Supported the implementation and validation of client security controls against established policies and standards.
+- **Risk-based prioritisation** — Assessed vulnerabilities and helped prioritise remediation based on severity, exploitability, and business impact.
+- **Risk reporting** — Documented security findings with clear risk ratings and practical remediation guidance for client stakeholders.
+- **Business impact analysis** — Helped identify critical business functions, operational dependencies, and risk exposures.
+- **Compliance support** — Reviewed firewall logs for potential policy violations and helped onboard staff on security procedures and the handling of sensitive information.
 
-- 🔍 Executed structured VAPT engagements across networks, web apps, servers, and endpoints
-- 📊 Supported Business Impact Analysis (BIA) that drove **90% improvement in risk visibility** at EKEDC
-- 🔥 Performed firewall log analysis to detect suspicious traffic, unauthorized access, and policy violations
-- 🚨 Triaged MSSP security alerts using CVSS scoring and business impact prioritization
-- 📄 Produced technical reports with exploitation evidence, risk ratings, and remediation guidance
-- 🛡️ Deployed and supported customer security solutions at ITstack across multi-client infrastructure
+## Selected Certifications
 
----
+- Junior GRC Analyst (JGA)
+- CompTIA Security+
+- ISC2 Certified in Cybersecurity (CC)
+- Certified Network Security Practitioner (CNSP)
+- Certified AppSec Practitioner (CAP)
 
-## 🛠️ Core Skills
+## Let’s Connect
 
-![VAPT](https://img.shields.io/badge/VAPT-CC0000?style=flat-square&logoColor=white)
-![EDR](https://img.shields.io/badge/EDR-00B4E0?style=flat-square&logoColor=white)
-![Firewall Review](https://img.shields.io/badge/Firewall_Review-EE3124?style=flat-square&logo=fortinet&logoColor=white)
-![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-CC0000?style=flat-square&logoColor=white)
-![NIST CSF](https://img.shields.io/badge/NIST_CSF-003087?style=flat-square&logoColor=white)
-![Threat Management](https://img.shields.io/badge/Threat_&_Vuln_Mgmt-0073CF?style=flat-square&logoColor=white)
-![Risk Assessment](https://img.shields.io/badge/Risk_Assessment-2ECC71?style=flat-square&logoColor=white)
-![Incident Triage](https://img.shields.io/badge/Incident_Triage-FF6633?style=flat-square&logoColor=white)
-![Windows Server](https://img.shields.io/badge/Windows_Server_AD-0078D6?style=flat-square&logo=windows&logoColor=white)
-![Phishing Simulation](https://img.shields.io/badge/Phishing_Simulation-F39C12?style=flat-square&logoColor=white)
-![Security Awareness](https://img.shields.io/badge/Security_Awareness_Training-8E44AD?style=flat-square&logoColor=white)
-
----
-
-## 🏅 Certifications
-
-
- Junior GRC Analyst *(JGA)* 
- 
- Certified Cybersecurity Educator Professional *(CCEP)* 
- 
- Certified Ransomware Protection Officer *(CRPO)* 
- 
- Certified Network Security Practitioner *(CNSP)*| Certified AppSec Practitioner *(CAP)*
- 
- Certified in Cybersecurity *(CC)* — ISC² 
- 
- CompTIA Security+  
-
- Certified Network Security Specialist *(CNSS)* 
-
----
-
-## 🎓 Education & Training
-
--  B.Sc. Mathematics & Computer Science
-- 📜 Google Cybersecurity Professional Certificate
-- 📜 IBM Cybersecurity Analyst Professional Certificate
-- 📜 Fortinet Network Security Professional *(NSE 1–3)*
-- 📜 Cisco CyberOps
-- 📜 Google IT Support Professional
-- 📜 Diploma in Computer Engineering & Networking
-
----
-
-<div align="center">
-
-*"Break it ethically. Fix it permanently."*
-
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00ff88,100:0d1117&height=100&section=footer" width="100%" />
-
-</div>
+Hiring for **GRC, IT Risk & Controls, or IT Audit**? [Connect with me on LinkedIn](https://www.linkedin.com/in/simonetim) to discuss how I can support your team’s control reviews, risk reporting, and remediation follow-up.
