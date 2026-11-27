@@ -1,10 +1,20 @@
+<div align="center">
+
 # Simon Etim
 
 **Governance, Risk & Compliance (GRC) | IT Risk & Controls**
 
-I assess technology risks, validate security controls, and turn technical findings into clear remediation priorities. My background in cybersecurity and IT support helps me explain where a control falls short, what it could mean for business operations, and what teams should address first.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-simonetim-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonetim)
+[![Portfolio](https://img.shields.io/badge/Portfolio-cyberchi3f-00ff88?style=for-the-badge&logo=github&logoColor=black)](https://github.com/cyberchi3f/Portfolio)
+[![X](https://img.shields.io/badge/X-_cyb3rchi3f-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/_cyb3rchi3f)
+[![Medium](https://img.shields.io/badge/Medium-@simon__Jr-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@simon_Jr)
+[![Email](https://img.shields.io/badge/Email-iam.simon.etim@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iam.simon.etim@gmail.com)
 
-[LinkedIn](https://www.linkedin.com/in/simonetim) · [Email](mailto:iam.simon.etim@gmail.com) · [Medium](https://medium.com/@simon_Jr)
+![Profile Views](https://komarev.com/ghpvc/?username=cyberchi3f&color=00ff88&style=flat-square&label=PROFILE+VIEWS)
+
+</div>
+
+I assess technology risks, validate security controls, and turn technical findings into clear remediation priorities. My background in cybersecurity and IT support helps me explain where a control falls short, what it could mean for business operations, and what teams should address first.
 
 ## Featured Case Study
 
@@ -29,13 +39,17 @@ This case study follows a simulated risk assessment for a 150-person IT consulti
 - **Business impact analysis** — Helped identify critical business functions, operational dependencies, and risk exposures.
 - **Compliance support** — Reviewed firewall logs for potential policy violations and helped onboard staff on security procedures and the handling of sensitive information.
 
-## Selected Certifications
+## Certifications
 
 - Junior GRC Analyst (JGA)
 - CompTIA Security+
 - ISC2 Certified in Cybersecurity (CC)
 - Certified Network Security Practitioner (CNSP)
 - Certified AppSec Practitioner (CAP)
+- Certified Cybersecurity Educator Professional (CCEP)
+- Certified Ransomware Protection Officer (CRPO)
+- Certified Network Security Specialist (CNSS)
+
 
 ## Let’s Connect
 
